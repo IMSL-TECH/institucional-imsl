@@ -33,7 +33,7 @@ export default function Home() {
             Error qui culpa. Porro cupiditate veniam assumenda nostrum eius.
             Tempore rerum eos. Est perferendis nesciunt corrupti quia sunt
             reprehenderit id autem. Quis in voluptates perspiciatis. Voluptatem
-            saepe aut vel ut reprehenderit id perferendis.
+            saepe aut vel ut reprehenderit id perferendis
           </p>
         </div>
 
