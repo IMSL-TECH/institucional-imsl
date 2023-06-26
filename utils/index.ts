@@ -1,9 +1,9 @@
-export function useDebounce(
-  func: (...args: any[]) => any,
+export function useDebounce<T extends (...args: any[]) => any>(
+  func: T,
   delay: number
-): (...args: any[]) => void {
+): (...args: Parameters<T>) => void {
   let timeoutId: ReturnType<typeof setTimeout>;
-  return function (...args: any[]): void {
+  return function (this: ThisParameterType<T>, ...args: Parameters<T>): void {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
       func.apply(this, args);

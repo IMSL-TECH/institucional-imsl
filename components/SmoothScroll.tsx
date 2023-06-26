@@ -9,7 +9,7 @@ const animated = {
 export default function SmoothScroll() {
   const [visible, setVisible] = useState("");
 
-  const handleClick = (event: MouseEvent) => {
+  const handleClick = (event: any) => {
     event.preventDefault();
 
     const main = document.querySelector("main");
