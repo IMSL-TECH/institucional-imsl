@@ -194,12 +194,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="gap-10 py-40 px-8 lg:px-10 flex flex-col justify-center">
+      <section className="gap-10 py-40 px-8 w-full items-center lg:px-10 flex flex-col justify-center">
         <h1 className="w-full flex justify-center max-w-screen-xl">
           Próximos eventos
         </h1>
-        <div className="flex max-w-screen-xl justify-center w-full items-center flex-wrap flex-row gap-10">
-          {events.map(renderEvents)}
+        <div className="w-full max-w-7xl">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {events.map(renderEvents)}
+          </div>
         </div>
       </section>
       <Footer />
