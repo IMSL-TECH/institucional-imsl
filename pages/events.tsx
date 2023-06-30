@@ -92,7 +92,7 @@ export default function Event() {
   );
   return (
     <main
-      className={`flex min-h-screen flex-col items-center ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center bg-white ${inter.className}`}
     >
       <Menu />
       <section className="h-[50vh] w-full flex justify-center items-center bg-black relative">

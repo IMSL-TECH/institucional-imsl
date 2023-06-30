@@ -8,5 +8,5 @@ export function useDebounce<T extends (...args: any[]) => any>(
     timeoutId = setTimeout(() => {
       func.apply(this, args);
     }, delay);
-  };
+  }
 }

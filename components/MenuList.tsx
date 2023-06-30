@@ -34,7 +34,7 @@ function ListLinks({
         href={href}
         className={`menuList w-full flex justify-center items-center h-full whitespace-nowrap uppercase font-sans hover:rounded-md p-1 ${
           className && className
-        } ${isSelected && "!text-orange-600"} `}
+        } ${isSelected && "!text-light-green"} `}
       >
         {title}
       </Link>
@@ -43,10 +43,12 @@ function ListLinks({
 }
 
 export default function MenuList({
+  active = true,
   onClick,
   className,
   flexDirection = "row",
 }: {
+  active?: boolean;
   onClick?: () => void;
   className?: string;
   flexDirection?: "row" | "column";
@@ -59,7 +61,7 @@ export default function MenuList({
         key={idx}
         title={title}
         href={href}
-        isSelected={href == router?.route}
+        isSelected={href == router?.route && active}
         className={className}
         onClick={onClick}
       />

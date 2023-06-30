@@ -10,16 +10,9 @@ import { useCallback } from "react";
 import Jucimar from "@/assets/user/FOTO JUCIMAR RAMOS.jpg";
 import Berenice from "@/assets/user/62223956_1887020474731459_3011400726186833414_n.webp";
 
-import type { StaticImageData } from "next/image";
+import { UserInfoType, TitleDescriptionType } from "@/types";
 
 const inter = Inter({ subsets: ["latin"] });
-
-type UserInfoType = {
-  image: StaticImageData;
-  name: string;
-  occupation: string;
-  text: string;
-};
 
 const userInfoList = [
   {
@@ -58,6 +51,15 @@ function UserInfo({ image, name, occupation, text }: UserInfoType) {
   );
 }
 
+function TitleDescription({ title, description }: TitleDescriptionType) {
+  return (
+    <div>
+      <h1 className="mb-3">{title}</h1>
+      <div className="font-family-Lora text-lg">{description}</div>
+    </div>
+  );
+}
+
 export default function Jose() {
   const renderUserList = useCallback(
     ({ name, image, occupation, text }: UserInfoType, idx: number) => (
@@ -72,11 +74,20 @@ export default function Jose() {
     [userInfoList]
   );
 
+  const renderTitleDescription = useCallback(
+    ({ title, description }: TitleDescriptionType) => {
+      return <TitleDescription title={title} description={description} />;
+    },
+    []
+  );
+
   return (
     <main className={`flex min-h-screen flex-col ${inter.className}`}>
       <Menu />
-      <section className="h-[50vh] w-full bg-black">
-        {/* <Image src={}></Image> */}
+      <section className="h-[50vh] w-full flex justify-center items-center bg-black relative">
+        <p className="absolute bottom-16 whitespace-nowrap font-['Montserrat'] text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-6xl 2xl:text-8xl 2xl:bottom-28">
+          Quem nós somos
+        </p>
       </section>
       <section className="w-full p-8 py-20 sm:py-32 gap-14 flex flex-col items-center">
         <div className="font-family-Lora text-2xl sm:text-3xl w-full">

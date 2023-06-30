@@ -118,7 +118,7 @@ export default function Home() {
   );
 
   return (
-    <main className={`flex min-h-screen flex-col ${inter.className}`}>
+    <main className={`flex min-h-screen flex-col bg-white ${inter.className}`}>
       <Menu />
       <section className="h-screen relative flex justify-center bg-white items-center">
         <Image
@@ -161,7 +161,7 @@ export default function Home() {
           {commonCults.map(renderCommonCults)}
         </div>
       </section>
-      <section className="bg-[#247377] flex justify-center py-40 px-8 lg:px-10">
+      <section className="bg-primary flex justify-center py-40 px-8 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:justify-center gap-10">
           <div className="gap-7 flex flex-col items-center lg:items-start max-w-screen-sm">
             <h1 className="text-3xl text-white w-full">Voluntáriado</h1>
