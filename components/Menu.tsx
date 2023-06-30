@@ -61,7 +61,7 @@ export default function Menu() {
         >
           <MenuList
             flexDirection="column"
-            className="text-black md:text-white"
+            className="text-black md:text-white hover:!text-white"
             onClick={handleToggle}
           />
         </div>

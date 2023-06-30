@@ -12,6 +12,7 @@ export default function Document() {
         />
       </Head>
       <body>
+        <title>Monte Sião</title>
         <Main />
         <NextScript />
       </body>

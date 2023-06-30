@@ -12,16 +12,16 @@ export default function SmoothScroll() {
   const handleClick = (event: any) => {
     event.preventDefault();
 
-    const main = document.querySelector("main");
+    const main = document.querySelector("html");
     main?.scrollIntoView({ behavior: "smooth" });
 
     setVisible(animated?.goTop);
 
-    const voltarAoEstadoOriginal = useDebounce(() => {
+    const defaultState = useDebounce(() => {
       setVisible("");
     }, 501);
 
-    voltarAoEstadoOriginal();
+    defaultState();
   };
 
   useEffect(() => {

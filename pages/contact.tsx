@@ -5,6 +5,8 @@ import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 
+import whatsapp from "../assets/icons/whatsapp_white.png";
+
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,7 +41,7 @@ export default function Home() {
 
         <div className="mt-12 flex flex-col md:flex-row gap-10">
           <div className="w-full md:w-1/2">
-            <h1>Localização</h1>
+            <h1 className="mb-4">Localização</h1>
             <div>
               <p className="font-family-Lora text-lg">
                 Igreja Monte Sião Linhares
@@ -53,7 +55,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full md:w-1/2">
-            <h1>Informação para contato</h1>
+            <h1 className="mb-4">Informação para contato</h1>
             <p className="font-family-Lora text-lg">@Montesiaolinhares</p>
             <p className="font-family-Lora text-lg">
               comunicacao.montesiao@gmail.com
@@ -62,7 +64,18 @@ export default function Home() {
               Telefone: (27) 3373-6313 - Horário para contato 13:30 às 17:30
             </p>
 
-            <Button href="/" width="w-full" type={2}>
+            <Button
+              target="_blank"
+              href="https://wa.me/5527999280013"
+              width="w-full mt-4"
+              type={2}
+            >
+              <Image
+                src={whatsapp}
+                alt="Ícone Whatsapp"
+                width={30}
+                className="mr-3"
+              />
               Whatsapp
             </Button>
           </div>
