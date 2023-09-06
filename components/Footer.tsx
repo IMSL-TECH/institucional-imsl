@@ -36,12 +36,12 @@ const social = [
 function Social({ href, alt, icon, name }: SocialType) {
   return (
     <Link href={href} target="_blank">
-      <div className="flex items-center gap-5 w-40">
+      <div className="flex items-center gap-5 sm:w-40">
         <div className="border border-white p-3 rounded-full">
           <Image alt={alt} src={icon} />
         </div>
 
-        <h1 className="text-sm text-white">{name}</h1>
+        <h1 className="text-sm text-white hidden sm:flex">{name}</h1>
       </div>
     </Link>
   );

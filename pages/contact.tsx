@@ -21,7 +21,7 @@ export default function Home() {
           Entre em contato
         </p>
       </section>
-      <section className="py-32 px-8 lg:px-10 max-w-screen-xl">
+      <section className="py-32 px-8 lg:px-10 w-full max-w-screen-xl">
         <div className="flex flex-col gap-10">
           <p className="font-family-Lora capital-first-letter text-lg">
             Corrupti voluptas sed possimus odio cupiditate. Ut id nemo
