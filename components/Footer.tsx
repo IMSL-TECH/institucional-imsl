@@ -35,7 +35,7 @@ const social = [
 
 function Social({ href, alt, icon, name }: SocialType) {
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <div className="flex items-center gap-5 w-40">
         <div className="border border-white p-3 rounded-full">
           <Image alt={alt} src={icon} />
@@ -54,10 +54,6 @@ export default function Footer() {
     ),
     []
   );
-
-  const handleClick = () => {
-    alert("jose");
-  };
 
   return (
     <section>
