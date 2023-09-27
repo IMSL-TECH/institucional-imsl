@@ -49,8 +49,8 @@ function Social({ href, alt, icon, name }: SocialType) {
 
 export default function Footer() {
   const renderSocial = useCallback(
-    ({ href, alt, icon, name }: SocialType) => (
-      <Social href={href} alt={alt} icon={icon} name={name} />
+    ({ href, alt, icon, name }: SocialType, idx: number) => (
+      <Social href={href} alt={alt} icon={icon} name={name} key={idx} />
     ),
     []
   );

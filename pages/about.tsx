@@ -18,14 +18,14 @@ const userInfoList = [
   {
     name: "Jucimar Ramos",
     image: Jucimar,
-    occupation: "Pastor presidente",
-    text: "Laudantium cumque pariatur doloribus et molestias. Natus et voluptas consequuntur quo. Ut eos neque nostrum fugiat impedit. Deserunt qui vitae quidem. Aut laudantium veniam omnis sed ullam quo.",
+    occupation: "Pastor sênior",
+    text: "Pastor, palestrante e escritor com mais de 35 livros lançados. Ministro de cura interior desde 1991, foi treinado pelo Ministério REVER MAPI/CEPAL com certificação em Mestre em Cura Interior. É pastor Sênior da igreja Monte Sião desde o ano 2000. É presidente do Ministério Bálsamo de Gileade. É casado com a pastora Berenice e tem dois filhos, Mhayza e Marcos, casado com Bruna, pais da Karen, sua netinha. Para saber mais: @prjucimarramos",
   },
   {
-    name: "Berenice Peres",
+    name: "Berenice Ramos",
     image: Berenice,
-    occupation: "Pastora",
-    text: "Laudantium cumque pariatur doloribus et molestias. Natus et voluptas consequuntur quo. Ut eos neque nostrum fugiat impedit. Deserunt qui vitae quidem. Aut laudantium veniam omnis sed ullam quo.",
+    occupation: "Pastora sênior",
+    text: "Pastora, palestrante e ministra de cura interior, a pastora Berê, carinhosamente chamada por seus discípulos, cuida da igreja local e lidera diretamente o ministério de mulheres da igreja, trabalhando assuntos importantes para este tempo, como feminilidade, autocuidado, paternidade etc. Auxilia o pastor Jucimar no Ministério Bálsamo de Gileade e é formada em Assistência Social. Casada com o pastor Jucimar, tem dois filhos, Mhayza e Marcos, casado com Bruna, pais da Karen, sua netinha.",
   },
 ];
 
@@ -46,7 +46,7 @@ function UserInfo({ image, name, occupation, text }: UserInfoType) {
         </div>
       </div>
 
-      <div>{text}</div>
+      <div className="text-sm">{text}</div>
     </div>
   );
 }
@@ -86,10 +86,10 @@ export default function Jose() {
       <Menu />
       <section className="h-[50vh] w-full flex justify-center items-center bg-black relative">
         <p className="absolute bottom-16 whitespace-nowrap font-['Montserrat'] text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-6xl 2xl:text-8xl 2xl:bottom-28">
-          Quem nós somos
+          Quem somos
         </p>
       </section>
-      <section className="w-full p-8 py-20 sm:py-32 gap-14 flex flex-col items-center">
+      <section className="w-full p-6 py-20 sm:py-32 gap-14 flex flex-col items-center">
         <div className="font-family-Lora text-2xl sm:text-3xl w-full">
           Em tempos de grande confusão no mundo, não há nada mais importante
           para alguém que quer viver em serenidade do que saber quem é e o que
@@ -101,11 +101,11 @@ export default function Jose() {
           <div>
             <h1 className="mb-3">Somos Igreja</h1>
             <div className="font-family-Lora text-lg">
-              Porque a palavra Igreja fala de uma comunidade que se une e se
-              congrega ao redor do nome de Jesus, <b>somos Igreja</b> porque
-              amamos a Jesus e amamos uns aos outros buscando viver juntos para
-              servir a Deus através de Jesus e para servirmos uns aos outros,
-              pois é isto que significa ser IGREJA.
+              Porque a palavra Igreja fala de uma comunidade que se une e
+              congrega ao redor do nome de Jesus. Somos Igreja porque amamos a
+              Jesus e amamos uns aos outros, buscando viver juntos para servir a
+              Deus através de Jesus e para servirmos uns aos outros, pois é isto
+              que significa ser IGREJA.
             </div>
           </div>
           <div>
@@ -157,7 +157,7 @@ export default function Jose() {
           </div>
         </div>
       </section>
-      <section className="w-full p-8 md:p-10 py-20">
+      <section className="w-full p-6 md:p-10 py-20">
         <div className="flex flex-col border-l-4 border-[#184a4d] p-10">
           <div className="font-family-Lora text-2xl antialiased">
             “O Senhor criará sobre todo o Monte Sião e sobre aqueles que se
@@ -168,18 +168,17 @@ export default function Jose() {
           <div className="text-sm font-['Open_Sans']">Isaias 4:5-6.</div>
         </div>
       </section>
-      <section className="w-full p-8 md:p-10 py-20">
+      <section className="w-full p-6 md:p-10 py-20">
         <div className="mb-12">
           <h1 className="text-2xl w-full normal-case mb-10">
             Visão, Valores e missão
           </h1>
           <div className="font-family-Lora capital-first-letter text-lg">
-            Queremos chegar a ser uma igreja modelo de discipulado,
-            relacionamento, e cuidado, onde muitas gerações de discípulos operam
-            o crescimento e desenvolvimento contínuo da igreja, enquanto
-            comunidade, sendo modelo simples e praticável. Nossa visão é ter
-            muitas gerações de discípulos levantando e sustentando muitas
-            gerações de discípulos.
+            Queremos ser uma igreja modelo de discipulado, relacionamento, e
+            cuidado, onde muitas gerações de discípulos operam o crescimento e
+            desenvolvimento contínuo da Igreja, enquanto comunidade, sendo
+            modelo simples e praticável. Nossa visão é ter muitas gerações de
+            discípulos levantando e sustentando muitas gerações de discípulos.
           </div>
         </div>
         <div className="flex flex-col gap-10">
@@ -228,7 +227,7 @@ export default function Jose() {
           </div>
         </div>
       </section>
-      <section className="w-full p-8 md:p-10 py-20">
+      <section className="w-full p-6 md:p-10 py-20">
         <h1 className="text-2xl w-full normal-case mb-10">
           Tomando posse da terra
         </h1>
@@ -244,7 +243,7 @@ export default function Jose() {
           promessas.
         </div>
       </section>
-      <section className="w-full p-8 md:p-10 py-20">
+      <section className="w-full p-6 md:p-10 py-20">
         <h1 className="text-2xl w-full normal-case mb-10">Nossa liderança</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {userInfoList.map(renderUserList)}
