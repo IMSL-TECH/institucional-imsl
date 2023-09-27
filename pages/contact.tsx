@@ -21,7 +21,7 @@ export default function Home() {
           Entre em contato
         </p>
       </section>
-      <section className="py-32 px-8 lg:px-10 w-full max-w-screen-xl">
+      <section className="py-32 px-6 lg:px-10 w-full max-w-screen-xl">
         <div className="flex flex-col gap-10">
           <p className="font-family-Lora capital-first-letter text-lg">
             Corrupti voluptas sed possimus odio cupiditate. Ut id nemo
@@ -43,24 +43,26 @@ export default function Home() {
           <div className="w-full md:w-1/2">
             <h1 className="mb-4">Localização</h1>
             <div>
-              <p className="font-family-Lora text-lg">
+              <p className="font-family-Lora text-base sm:text-lg">
                 Igreja Monte Sião Linhares
               </p>
-              <p className="font-family-Lora text-lg">
+              <p className="font-family-Lora text-base sm:text-lg">
                 Avenida Prefeito Samuel Batista Cruz
               </p>
-              <p className="font-family-Lora text-lg">
+              <p className="font-family-Lora text-base sm:text-lg">
                 Três Barras, Linhares - ES
               </p>
             </div>
           </div>
           <div className="w-full md:w-1/2">
             <h1 className="mb-4">Informação para contato</h1>
-            <p className="font-family-Lora text-lg">@Montesiaolinhares</p>
-            <p className="font-family-Lora text-lg">
+            <p className="font-family-Lora text-base sm:text-lg">
+              @Montesiaolinhares
+            </p>
+            <p className="font-family-Lora text-base sm:text-lg">
               comunicacao.montesiao@gmail.com
             </p>
-            <p className="font-family-Lora text-lg w-full">
+            <p className="font-family-Lora text-base sm:text-lg w-full">
               Telefone: (27) 3373-6313 - Horário para contato 13:30 às 17:30
             </p>
 

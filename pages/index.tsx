@@ -141,17 +141,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 px-8 lg:px-10 flex flex-col xl:flex-row xl:justify-center items-center gap-16">
+      <section className="py-32 px-6 lg:px-10 flex flex-col xl:flex-row xl:justify-center items-center gap-16">
         <div className="w-full sm:w-4/5 xl:w-6/12 flex flex-col items-center gap-10 max-w-screen-sm">
           <h1 className="w-full">Bem-vindo a igreja Monte Sião</h1>
           <div className="w-full font-family-Lora text-2xl sm:text-3xl">
-            Sejam muito bem-vindos a Igreja Monte Sião Linhares! Somos uma
-            igreja acolhedora, onde todas as pessoas são bem-vindas. Cremos que
-            Yahweh, o Deus de Abraão é soberano sobre todas as coisas, e
-            confiamos plenamente Nele. Amamos a cidade de Linhares, onde fica
-            nossa sede, e nosso coração arde por cumprir a missão que Jesus
-            confiou em nossas mãos, cuidando de pessoas, conhecendo a Deus e
-            fazendo-O conhecido!
+            Somos uma igreja acolhedora, onde todas as pessoas são bem-vindas,
+            cremos que Yahweh, o Deus de Abraão é soberano sobre todas as
+            coisas, e confiamos plenamente Nele. Amamos a cidade de Linhares,
+            onde fica nossa sede, e nosso coração arde por cumprir a missão que
+            Jesus confiou em nossas mãos, cuidando de pessoas, conhecendo a Deus
+            e fazendo-O conhecido!
           </div>
           <Button href="/about" width="w-full" type={2}>
             Quem nós somos
@@ -161,7 +160,7 @@ export default function Home() {
           {commonCults.map(renderCommonCults)}
         </div>
       </section>
-      <section className="bg-primary flex justify-center py-40 px-8 lg:px-10">
+      <section className="bg-primary flex justify-center py-40 px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:justify-center gap-10">
           <div className="gap-7 flex flex-col items-center lg:items-start max-w-screen-sm">
             <h1 className="text-3xl text-white w-full">Voluntáriado</h1>
@@ -177,9 +176,7 @@ export default function Home() {
             </Button>
           </div>
           <div className="gap-7 flex flex-col max-w-screen-sm">
-            <h1 className="text-3xl text-white">
-              Junte-se a um grupo do Connect
-            </h1>
+            <h1 className="text-3xl text-white">Junte-se a uma célula</h1>
             <div className="text-white font-family-Lora">
               Officia earum at quia recusandae. Tempora beatae est aliquam
               fugiat sed et. Exercitationem vitae molestiae officia eos aut id
@@ -194,7 +191,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="gap-10 py-40 px-8 w-full items-center lg:px-10 flex flex-col justify-center">
+      <section className="gap-10 py-40 px-6 w-full items-center lg:px-10 flex flex-col justify-center">
         <h1 className="w-full flex justify-center max-w-screen-xl">
           Próximos eventos
         </h1>

@@ -100,7 +100,7 @@ export default function Event() {
           Próximos eventos
         </p>
       </section>
-      <section className="w-full p-8 py-20 sm:py-32 gap-14 flex flex-col max-w-7xl items-center">
+      <section className="w-full p-6 py-20 sm:py-32 gap-14 flex flex-col max-w-7xl items-center">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
           {events.map(renderEventList)}
         </div>
