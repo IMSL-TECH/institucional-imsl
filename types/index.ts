@@ -15,7 +15,11 @@ export type UserInfoType = {
   image: StaticImageData;
   name: string;
   occupation: string;
-  text: string;
+  content: string;
+  link?: {
+    label: string;
+    href: string;
+  }
 };
 
 export type TitleDescriptionType = {

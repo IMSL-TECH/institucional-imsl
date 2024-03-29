@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDebounce } from "@/utils";
+import Image from "next/image";
+import row from "@/assets/icons/row-top.png"
 
 const animated = {
   active: "null",
@@ -43,12 +45,18 @@ export default function SmoothScroll() {
 
   return (
     <button
-      className={`bg-black w-12 h-12 fixed right-6 bottom-6 rounded-lg duration-500 transform  ease-in-out ${
+      className={`bg-black w-12 h-12 flex justify-center items-center text-white fixed right-6 bottom-6 rounded-lg duration-500 transform  ease-in-out ${
         visible ? visible : "opacity-0 translate-y-20"
       }`}
       onClick={(e) => {
         handleClick(e);
       }}
-    ></button>
+    > <Image
+    src={row}
+    width={18}
+    height={18}
+    alt="Icon row top"
+  />
+  </button>
   );
 }
