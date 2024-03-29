@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
@@ -9,8 +10,10 @@ import { useCallback } from "react";
 
 import Jucimar from "@/assets/user/FOTO JUCIMAR RAMOS.jpg";
 import Berenice from "@/assets/user/62223956_1887020474731459_3011400726186833414_n.webp";
+import banner from "@/assets/banner/home_cover_resized.jpg"
 
 import { UserInfoType, TitleDescriptionType } from "@/types";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,17 +22,18 @@ const userInfoList = [
     name: "Jucimar Ramos",
     image: Jucimar,
     occupation: "Pastor sênior",
-    text: "Pastor, palestrante e escritor com mais de 35 livros lançados. Ministro de cura interior desde 1991, foi treinado pelo Ministério REVER MAPI/CEPAL com certificação em Mestre em Cura Interior. É pastor Sênior da igreja Monte Sião desde o ano 2000. É presidente do Ministério Bálsamo de Gileade. É casado com a pastora Berenice e tem dois filhos, Mhayza e Marcos, casado com Bruna, pais da Karen, sua netinha. Para saber mais: @prjucimarramos",
+    content: "Pastor, palestrante e escritor com mais de 35 livros lançados. Ministro de cura interior desde 1991, foi treinado pelo Ministério REVER MAPI/CEPAL com certificação em Mestre em Cura Interior. É pastor Sênior da igreja Monte Sião desde o ano 2000. É presidente do Ministério Bálsamo de Gileade. É casado com a pastora Berenice e tem dois filhos, Mhayza e Marcos, casado com Bruna, pais da Karen, sua netinha. Para saber mais:",
+    link: {label: "@prjucimarramos", href: "https://www.instagram.com/prjucimarramos/"}
   },
   {
     name: "Berenice Ramos",
     image: Berenice,
     occupation: "Pastora sênior",
-    text: "Pastora, palestrante e ministra de cura interior, a pastora Berê, carinhosamente chamada por seus discípulos, cuida da igreja local e lidera diretamente o ministério de mulheres da igreja, trabalhando assuntos importantes para este tempo, como feminilidade, autocuidado, paternidade etc. Auxilia o pastor Jucimar no Ministério Bálsamo de Gileade e é formada em Assistência Social. Casada com o pastor Jucimar, tem dois filhos, Mhayza e Marcos, casado com Bruna, pais da Karen, sua netinha.",
+    content: "Pastora, palestrante e ministra de cura interior, a pastora Berê, carinhosamente chamada por seus discípulos, cuida da igreja local e lidera diretamente o ministério de mulheres da igreja, trabalhando assuntos importantes para este tempo, como feminilidade, autocuidado, paternidade etc. Auxilia o pastor Jucimar no Ministério Bálsamo de Gileade e é formada em Assistência Social. Casada com o pastor Jucimar, tem dois filhos, Mhayza e Marcos, casado com Bruna, pais da Karen, sua netinha.",
   },
 ];
 
-function UserInfo({ image, name, occupation, text }: UserInfoType) {
+function UserInfo({ image, name, occupation, content, link }: UserInfoType) {
   return (
     <div>
       <div className="flex gap-4 mb-4">
@@ -46,7 +50,9 @@ function UserInfo({ image, name, occupation, text }: UserInfoType) {
         </div>
       </div>
 
-      <div className="text-sm">{text}</div>
+
+      <div className="text-sm">{content}{link?.label ? <Link target="_blank" href={link?.href} ><b>{link?.label}</b></Link> : null} </div>
+      
     </div>
   );
 }
@@ -62,12 +68,13 @@ function TitleDescription({ title, description }: TitleDescriptionType) {
 
 export default function Jose() {
   const renderUserList = useCallback(
-    ({ name, image, occupation, text }: UserInfoType, idx: number) => (
+    ({ name, image, occupation, content, link }: UserInfoType, idx: number) => (
       <UserInfo
         name={name}
         image={image}
         occupation={occupation}
-        text={text}
+        content={content}
+        link={link}
         key={idx}
       />
     ),
@@ -85,11 +92,12 @@ export default function Jose() {
     <main className={`flex min-h-screen flex-col ${inter.className}`}>
       <Menu />
       <section className="h-[50vh] w-full flex justify-center items-center bg-black relative">
+        <Image alt="Banner" src={banner} className="w-full h-full bg-no-repeat bg-contain bg-center object-cover"/>
         <p className="absolute bottom-16 whitespace-nowrap font-['Montserrat'] text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-6xl 2xl:text-8xl 2xl:bottom-28">
           Quem somos
         </p>
       </section>
-      <section className="w-full p-6 py-20 sm:py-32 gap-14 flex flex-col items-center">
+      <section className="w-full py-8 lg:py-20 px-8 sm:px-14 lg:px-20 sm:py-32 gap-14 flex flex-col items-center">
         <div className="font-family-Lora text-2xl sm:text-3xl w-full">
           Em tempos de grande confusão no mundo, não há nada mais importante
           para alguém que quer viver em serenidade do que saber quem é e o que
@@ -123,18 +131,7 @@ export default function Jose() {
           <div>
             <h1 className="mb-3">Somos Monte Sião</h1>
             <div className="font-family-Lora text-lg">
-              Porque O Monte Sião é a verdadeira origem da cristandade, é de
-              Sião que vem a lei e a verdade que Deus fez se espalhar pela
-              Terra. O Monte Sião é sinônimo de Israel e de Jerusalém, onde toda
-              a revelação do Deus de Abraão começou e se desenvolveu até chegar
-              ao seu clímax na cruz.<b> Somos Monte Sião</b> porque recusamos a
-              ideia de a cultura e a tradição ocidental substituir a cultura
-              judaica e a forma de cultuar ao Deus de Abraão, e aceitamos
-              aprender com o povo que nos deu as escrituras, os patriarcas, os
-              profetas, os apóstolos e até o próprio Messias, o Cristo.
-              <b> Somos Monte Sião</b>
-              porque quase todos os escritores bíblicos são judeus e tudo nos
-              veio do Monte Sião.
+            Porque O Monte Sião é a verdadeira origem da cristandade, é de Sião que vem a lei e a verdade que Deus fez se espalhar pela Terra. Somos Monte Sião porque quase todos os escritores bíblicos são judeus, assim como Jesus, nosso Messias. O Monte Sião é sinônimo de Israel e de Jerusalém, onde toda a revelação do Deus de Abraão começou e se desenvolveu até chegar ao seu clímax na cruz. Somos Monte Sião porque recusamos a ideia de a cultura e a tradição ocidental substituir a cultura judaica e a forma de cultuar ao Deus de Abraão, e decidimos aprender com o povo que nos deu as escrituras, os patriarcas, os profetas e com os apóstolos.
             </div>
           </div>
           <div>
@@ -157,7 +154,7 @@ export default function Jose() {
           </div>
         </div>
       </section>
-      <section className="w-full p-6 md:p-10 py-20">
+      <section className="w-full p-6 md:p-10 px-8 sm:px-14 lg:px-20">
         <div className="flex flex-col border-l-4 border-[#184a4d] p-10">
           <div className="font-family-Lora text-2xl antialiased">
             “O Senhor criará sobre todo o Monte Sião e sobre aqueles que se
@@ -168,17 +165,13 @@ export default function Jose() {
           <div className="text-sm font-['Open_Sans']">Isaias 4:5-6.</div>
         </div>
       </section>
-      <section className="w-full p-6 md:p-10 py-20">
+      <section className="w-full p-6 md:p-10 px-8 sm:px-14 lg:px-20">
         <div className="mb-12">
           <h1 className="text-2xl w-full normal-case mb-10">
             Visão, Valores e missão
           </h1>
           <div className="font-family-Lora capital-first-letter text-lg">
-            Queremos ser uma igreja modelo de discipulado, relacionamento, e
-            cuidado, onde muitas gerações de discípulos operam o crescimento e
-            desenvolvimento contínuo da Igreja, enquanto comunidade, sendo
-            modelo simples e praticável. Nossa visão é ter muitas gerações de
-            discípulos levantando e sustentando muitas gerações de discípulos.
+          Queremos ser uma igreja modelo de discipulado, relacionamento, e cuidado, onde muitas gerações de discípulos operam o crescimento e desenvolvimento contínuo da Igreja, enquanto comunidade, sendo modelo simples e praticável. Nossa visão é ter muitas gerações de discípulos levantando e sustentando muitas gerações de discípulos.
           </div>
         </div>
         <div className="flex flex-col gap-10">
@@ -227,7 +220,7 @@ export default function Jose() {
           </div>
         </div>
       </section>
-      <section className="w-full p-6 md:p-10 py-20">
+      <section className="w-full p-6 md:p-10 px-8 sm:px-14 lg:px-20">
         <h1 className="text-2xl w-full normal-case mb-10">
           Tomando posse da terra
         </h1>
@@ -243,7 +236,7 @@ export default function Jose() {
           promessas.
         </div>
       </section>
-      <section className="w-full p-6 md:p-10 py-20">
+      <section className="w-full p-6 md:p-10 py-10 lg:py-20 px-8 sm:px-14 lg:px-20">
         <h1 className="text-2xl w-full normal-case mb-10">Nossa liderança</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {userInfoList.map(renderUserList)}
