@@ -1,8 +1,5 @@
 import background from "../assets/banner/mountain-background-web.png"
-import Social from "@/components/Social";
 import Image from "next/image";
-
-import error from "@/assets/icons/error.svg"
 import error404 from "@/assets/icons/404.svg"
 import Link from "next/link";
 
