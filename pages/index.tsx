@@ -162,20 +162,28 @@ export default function Home() {
       </section>
       <section className="bg-primary flex justify-center py-40 px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:justify-center gap-10">
-        <div className="gap-7 w-full flex flex-col items-center lg:items-start max-w-screen-sm">
-            <h1 className="text-2xl text-white w-full">Voluntáriado</h1>
-            <div className="text-white font-family-Lora">
-            Você pode ser voluntário em um de nossos ministérios! Os ministérios têm o objetivo de servir a Igreja, as redes, as células e ao mundo com suas ferramentas, buscando o aperfeiçoamento delas em todos os sentidos possíveis, para servir cada vez melhor ao corpo de Jesus.
+          <div className="gap-7 flex flex-col items-center lg:items-start max-w-screen-sm">
+            <h1 className="text-3xl text-white w-full">Voluntáriado</h1>
+            <div className="text-white text-xl font-family-Lora">
+              Você pode ser voluntário em um de nossos ministérios! Os
+              ministérios servem para servir a Igreja, as redes, as células e ao
+              mundo com suas ferramentas, buscando o aperfeiçoamento delas em
+              todos os sentidos possíveis, para servir cada vez melhor ao corpo
+              de Jesus.
             </div>
             <Button type={3} href="" width="mt-auto self-end w-full">
               Quero participar
             </Button>
           </div>
-          <div className="gap-7 w-full flex flex-col max-w-screen-sm">
-            <h1 className="text-2xl text-white">Junte-se a uma célula</h1>
-            <div className="text-white font-family-Lora">
-            Você pode se conectar conosco através de uma de nossas células! As células são grupos menores de estudos feito nas casas dos irmãos, uma ferramenta dada por Deus para mantermos a unidade do Corpo fluindo enquanto estudamos a Palavra. Encontre a célula mais próxima de você:
-            LINK PARA O ZAP DA COMUNICAÇÃO COM MENSAGEM: “QUERO PARTICIPAR DE UMA CELULA”
+          <div className="gap-7 flex flex-col max-w-screen-sm">
+            <h1 className="text-3xl text-white">Junte-se a uma célula</h1>
+            <div className="text-white text-xl font-family-Lora">
+              Officia earum at quia recusandae. Tempora beatae est aliquam
+              fugiat sed et. Exercitationem vitae molestiae officia eos aut id
+              ad. Et exercitationem quae perspiciatis mollitia. Laborum quasi
+              inventore eaque quia non. Ipsa dignissimos ipsum nisi qui eos et
+              iste magnam. Aut dolorum mollitia illum. Iste iure similique nobis
+              fuga est amet.
             </div>
             <Button type={3} href="" width="mt-auto self-end w-full">
               Encontrar uma celula
