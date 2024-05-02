@@ -28,4 +28,5 @@ export type SocialType = {
   name: string;
   alt: string;
   href: string;
+  style?: "default" | "green"
 };

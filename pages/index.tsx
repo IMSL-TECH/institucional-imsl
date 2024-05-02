@@ -164,7 +164,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row lg:justify-center gap-10">
           <div className="gap-7 flex flex-col items-center lg:items-start max-w-screen-sm">
             <h1 className="text-3xl text-white w-full">Voluntáriado</h1>
-            <div className="text-white font-family-Lora">
+            <div className="text-white text-xl font-family-Lora">
               Você pode ser voluntário em um de nossos ministérios! Os
               ministérios servem para servir a Igreja, as redes, as células e ao
               mundo com suas ferramentas, buscando o aperfeiçoamento delas em
@@ -177,7 +177,7 @@ export default function Home() {
           </div>
           <div className="gap-7 flex flex-col max-w-screen-sm">
             <h1 className="text-3xl text-white">Junte-se a uma célula</h1>
-            <div className="text-white font-family-Lora">
+            <div className="text-white text-xl font-family-Lora">
               Officia earum at quia recusandae. Tempora beatae est aliquam
               fugiat sed et. Exercitationem vitae molestiae officia eos aut id
               ad. Et exercitationem quae perspiciatis mollitia. Laborum quasi
