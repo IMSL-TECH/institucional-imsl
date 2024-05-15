@@ -33,7 +33,7 @@ export default function Menu() {
   );
 
   return (
-    <section className="flex w-screen px-12 pt-10 z-10 absolute justify-between">
+    <section className="flex w-full px-12 pt-10 z-10 absolute justify-between">
       <div>
         <Link href="/" className="">
           <Image src={logo} alt="Logo Monte Sião" className="h-12 w-12" />
