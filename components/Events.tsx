@@ -14,33 +14,33 @@ export default function Events({ title, children, href, info }: EventsType) {
       </Link>
       <div className="font-family-Lora text-base sm:text-xl">{children}</div>
       <div>
-        <div className="font-['Montserrat'] border-solid p-5 pl-12 border-y-[1px] border-gray-200 uppercase font-semibold tracking-[.25rem] text-[0.6rem] relative">
+        <div className="font-['Montserrat'] border-solid py-4 pl-10 border-y-[1px] border-gray-200 uppercase font-semibold text-[11px] tracking-[.15rem] sm:text-[0.6rem] relative">
           <Image
             src={calendar}
             width={21}
             height={21}
             alt="Ícone de relógio"
-            className="absolute left-5"
+            className="absolute left-2"
           />{" "}
           {info?.date}
         </div>
-        <div className="font-['Montserrat'] border-solid p-5 pl-12 border-y-[1px] -mt-px border-gray-200 uppercase font-semibold tracking-[.25rem] text-[0.6rem] relative">
+        <div className="font-['Montserrat'] border-solid py-4 pl-10 border-y-[1px] -mt-px border-gray-200 uppercase font-semibold text-[11px] tracking-[.15rem] sm:text-[0.6rem] relative">
           <Image
             src={clock}
             width={21}
             height={21}
             alt="Ícone de relógio"
-            className="absolute left-5"
+            className="absolute left-2"
           />
           {info?.time}
         </div>
-        <div className="font-['Montserrat'] border-solid p-5 pl-12 border-y-[1px] -mt-px border-gray-200 uppercase font-semibold tracking-[.25rem] text-[0.6rem] relative">
+        <div className="font-['Montserrat'] border-solid py-4 pl-10 border-y-[1px] -mt-px border-gray-200 uppercase font-semibold text-[11px] tracking-[.15rem] sm:text-[0.6rem] relative">
           <Image
             src={location}
             width={21}
             height={21}
             alt="Ícone de relógio"
-            className="absolute left-5"
+            className="absolute left-2"
           />
           {info?.address}
         </div>

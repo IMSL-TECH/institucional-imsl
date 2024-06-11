@@ -76,3 +76,7 @@ button > :children{
 .h-layer {
   height: revert-layer;
 }
+
+.blurCustom{
+  filter: blur(2px)
+}

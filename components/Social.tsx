@@ -42,7 +42,7 @@ function LinksSocial({ href, alt, icon, name, style = "default" }: SocialType) {
             <Image alt={alt} src={icon} />
           </div>
   
-          <h1 className={`text-sm text-white ${style === "green" ? "hidden" : "hidden sm:flex"}`}>{name}</h1>
+          <h1 className={`text-sm text-white ${style === "green" ? "hidden" : "hidden xl:flex"}`}>{name}</h1>
         </div>
       </Link>
     );
