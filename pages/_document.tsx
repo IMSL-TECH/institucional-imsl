@@ -12,7 +12,7 @@ export default function Document() {
         />
       </Head>
       <body>
-        <title>Monte Sião</title>
+        <title>Igreja Monte Sião</title>
         <Main />
         <NextScript />
       </body>

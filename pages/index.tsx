@@ -90,20 +90,19 @@ type CommonCultsType = {
   idx?: number;
 };
 
-function CommonCults({ title, date, address, length, idx = 0 }: CommonCultsType) {
-  console.log(length != idx + 1)
+function CommonCults({
+  title,
+  date,
+  address,
+  length,
+  idx = 0,
+}: CommonCultsType) {
   return (
-    <React.Fragment>
-      <div className="w-full gap-4 flex flex-col">
-        <h1>{title}</h1>
-        <div>
-          <div className="font-family-Lora sm:text-base">{date}</div>
-          <div className="font-family-Lora sm:text-base">{address}</div>
-        </div>
-      </div>
-    {length != idx + 1 ? <hr className="w-full border-t border-t-gray-200"/> : null}
-    
-    </React.Fragment>
+    <div className="w-full flex flex-col">
+      <h1>{title}</h1>
+
+      <div className="font-family-Lora sm:text-base">{date}</div>
+    </div>
   );
 }
 
@@ -116,10 +115,17 @@ export default function Home() {
     ),
     []
   );
-  const commonCultsLength = commonCults.length
+  const commonCultsLength = commonCults.length;
   const renderCommonCults = useCallback(
     ({ title, date, address }: CommonCultsType, idx: number) => (
-      <CommonCults title={title} date={date} address={address} key={idx} length={commonCultsLength} idx={idx}/>
+      <CommonCults
+        title={title}
+        date={date}
+        address={address}
+        key={idx}
+        length={commonCultsLength}
+        idx={idx}
+      />
     ),
     []
   );
@@ -129,16 +135,15 @@ export default function Home() {
       <Menu />
       <section className="h-screen relative flex justify-center items-center">
         <div className="w-full h-full relative">
-        <Image
-          src={banner}
-          alt="Logo Monte Sião"
-          className="bg-no-repeat bg-contain bg-center object-cover w-full h-full -z-10"
-        />
-        <div className="w-full h-full absolute bg-gradient-to-b from-[#162a65] to-[#247377] top-0 opacity-40"></div>
+          <Image
+            src={banner}
+            alt="Logo Monte Sião"
+            className="bg-no-repeat bg-contain bg-center object-cover w-full h-full -z-10"
+          />
+          <div className="w-full h-full absolute bg-gradient-to-b from-[#162a65] to-[#247377] top-0 opacity-40"></div>
         </div>
 
-        
-        <div className="absolute mt-40 xl:max-w-[80%] flex flex-col xl:flex-row justify-center gap-12 items-center">
+        <div className="absolute mt-32 xl:mt-0 xl:max-w-[80%] flex flex-col xl:flex-row justify-center gap-12 items-center">
           <h1 className="text-white w-52 text-center text-2xl sm:text-3xl md:text-4xl md:w-80 lg:w-64 lg:text-2xl xl:w-[36rem] xl:text-left xl:text-5xl">
             CONHECENDO A DEUS E FAZENDO-O CONHECIDO
           </h1>
@@ -153,8 +158,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 px-6 lg:px-10 flex flex-col xl:flex-row xl:justify-center items-center gap-16">
-        <div className="w-full sm:w-4/5 xl:w-6/12 flex flex-col items-center gap-10 max-w-screen-sm">
+      <section className="py-32 px-6 lg:px-10 flex flex-col xl:justify-center items-center gap-16">
+        <div className="w-full flex flex-col items-center gap-10 max-w-screen-sm xl:max-w-[1330px]">
           <h1 className="w-full">Bem-vindo a igreja Monte Sião</h1>
           <div className="w-full font-family-Lora text-[26px] sm:text-[28px] text-justify">
             Somos uma igreja acolhedora, onde todas as pessoas são bem-vindas,
@@ -164,18 +169,15 @@ export default function Home() {
             Jesus confiou em nossas mãos, cuidando de pessoas, conhecendo a Deus
             e fazendo-O conhecido!
           </div>
-          <Button href="/about" width="w-full" type={2}>
-            Quem nós somos
-          </Button>
         </div>
-        <div className="w-full h-full sm:w-4/5 xl:w-6/12 flex flex-col items-center xl:items-start gap-5 max-w-screen-sm">
+        <div className="w-full h-full xl:max-w-[1330px] flex flex-col sm:flex-row items-center xl:items-start gap-5 max-w-screen-sm">
           {commonCults.map(renderCommonCults)}
         </div>
       </section>
       <section className="bg-primary flex justify-center py-40 px-6 xl:px-10">
         <div className="flex flex-col xl:flex-row xl:justify-center gap-10">
           <div className="gap-7 w-full xl:w-1/2 flex flex-col items-center xl:items-start max-w-screen-sm">
-            <h1 className="text-2xl text-white w-full">Voluntáriado</h1>
+            <h1 className="text-2xl text-white w-full">Voluntariado</h1>
             <div className="text-white text-lg font-family-Lora text-justify">
               Você pode ser voluntário em um de nossos ministérios! Os
               ministérios servem para servir a Igreja, as redes, as células e ao
@@ -204,7 +206,7 @@ export default function Home() {
         </div>
       </section>
       <section className="gap-10 py-40 px-6 w-full items-center md:px-24 lg:px-10 flex flex-col justify-center">
-        <h1 className="w-full flex justify-center max-w-screen-xl">
+        <h1 className="w-full text-2xl flex justify-center max-w-screen-xl">
           Próximos eventos
         </h1>
         <div className="w-full max-w-[67rem]">
