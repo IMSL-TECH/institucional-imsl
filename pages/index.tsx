@@ -37,28 +37,6 @@ const events = [
       address: "8317, Av. Prefeito Samuel Batista Cruz, 8259 - Três Barras,",
     },
   },
-  {
-    title: "Confirencia das crianças de 2019",
-    children:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum",
-    href: "/",
-    info: {
-      date: "Sabado 27 de novembro",
-      time: "8:00AM - 5:30PM",
-      address: "8317, Av. Prefeito Samuel Batista Cruz, 8259 - Três Barras,",
-    },
-  },
-  {
-    title: "Confirencia das crianças de 2019",
-    children:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum",
-    href: "/",
-    info: {
-      date: "Sabado 27 de novembro",
-      time: "8:00AM - 5:30PM",
-      address: "8317, Av. Prefeito Samuel Batista Cruz, 8259 - Três Barras,",
-    },
-  },
 ];
 
 const commonCults = [
@@ -211,10 +189,11 @@ export default function Home() {
         <h1 className="w-full flex justify-center max-w-screen-xl">
           Próximos eventos
         </h1>
-        <div className="w-full max-w-[67rem] flex justify-center">
+        <div className="w-full max-w-[67rem] flex justify-center items-center flex-col gap-14">
           <div className="w-full grid grid-cols-1 xl:grid-cols-2 max-w-[640px] xl:max-w-none gap-10">
             {events.map(renderEvents)}
           </div>
+          <Button width="max-w-[640px] w-full" href="/events" type={2}>Ver mais</Button>
         </div>
       </section>
       <Footer />
