@@ -11,15 +11,15 @@ export default function Footer() {
       <div className="w-full h-16 bg-dark-green flex items-center justify-center">
         <Social />
       </div>
-      <div className="flex flex-col items-center bg-primary w-full">
-        <div className="py-24 w-full max-w-[70rem]  px-8 flex flex-col xl:flex-row lg:px-10  gap-8">
+      <div className="flex flex-col items-center py-24 lg:px-10 px-8 bg-primary w-full">
+        <div className="w-full max-w-[640px] xl:max-w-[70rem] flex flex-col xl:flex-row gap-8">
           <div className="w-full  xl:w-1/2 flex flex-col  items-center xl:items-start gap-5">
             <Image src={logo} alt="Logo Monte Sião" width={130} />
             <div className="text-white font-family-Lora opacity-75">
               Fundada em 2000 pelos pastores Fernando Pires e Leia Liberato,
               hoje é presidida e pastoreada pelo pastor Jucimar Ramos. A Monte
               Sião é uma igreja terapêutica, que se importa em pregar a as
-              verdades contidas na Palavra de Deus, seguindo-a f ielmente e
+              verdades contidas na Palavra de Deus, seguindo-a fielmente e
               buscando praticar todos os seus princípios. Venha cultuar a Deus
               conosco!
             </div>

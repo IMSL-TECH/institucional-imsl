@@ -159,11 +159,13 @@ export default function Home() {
       </section>
 
       <section className="py-32 px-6 lg:px-10 flex flex-col xl:justify-center items-center gap-16">
-        <div className="w-full flex flex-col items-center gap-10 max-w-screen-sm xl:max-w-[1330px]">
-          <h1 className="w-full">Bem-vindo a igreja Monte Sião</h1>
+        <div className="w-full flex flex-col items-center gap-[55px] max-w-screen-sm xl:max-w-[1330px]">
+          <h1 className="w-full text-center md:text-[30px] xl:text-[40px]">
+            Bem-vindo à igreja Monte Sião
+          </h1>
           <div className="w-full font-family-Lora text-[26px] sm:text-[28px] text-justify">
-            Somos uma igreja acolhedora, onde todas as pessoas são bem-vindas,
-            cremos que Yahweh, o Deus de Abraão é soberano sobre todas as
+            Somos uma igreja acolhedora, onde todas as pessoas são bem vindas.
+            Cremos que Yahweh, o Deus de Abraão é soberano sobre todas as
             coisas, e confiamos plenamente Nele. Amamos a cidade de Linhares,
             onde fica nossa sede, e nosso coração arde por cumprir a missão que
             Jesus confiou em nossas mãos, cuidando de pessoas, conhecendo a Deus
@@ -177,7 +179,7 @@ export default function Home() {
       <section className="bg-primary flex justify-center py-40 px-6 xl:px-10">
         <div className="flex flex-col xl:flex-row xl:justify-center gap-10">
           <div className="gap-7 w-full xl:w-1/2 flex flex-col items-center xl:items-start max-w-screen-sm">
-            <h1 className="text-white w-full" >Voluntariado</h1>
+            <h1 className="text-white w-full">Voluntariado</h1>
             <div className="text-white text-lg font-family-Lora text-justify">
               Você pode ser voluntário em um de nossos ministérios! Os
               ministérios servem para servir a Igreja, as redes, as células e ao
@@ -209,8 +211,8 @@ export default function Home() {
         <h1 className="w-full flex justify-center max-w-screen-xl">
           Próximos eventos
         </h1>
-        <div className="w-full max-w-[67rem]">
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="w-full max-w-[67rem] flex justify-center">
+          <div className="w-full grid grid-cols-1 xl:grid-cols-2 max-w-[640px] xl:max-w-none gap-10">
             {events.map(renderEvents)}
           </div>
         </div>
