@@ -99,7 +99,7 @@ function CommonCults({
 }: CommonCultsType) {
   return (
     <div className="w-full flex flex-col">
-      <h1>{title}</h1>
+      <h2>{title}</h2>
 
       <div className="font-family-Lora sm:text-base">{date}</div>
     </div>
@@ -140,7 +140,7 @@ export default function Home() {
             alt="Logo Monte Sião"
             className="bg-no-repeat bg-contain bg-center object-cover w-full h-full -z-10"
           />
-          <div className="w-full h-full absolute bg-gradient-to-b from-[#162a65] to-[#247377] top-0 opacity-40"></div>
+          <div className="w-full h-full absolute bg-gradient-to-b from-[#162a65] to-[#247377] top-0 opacity-70"></div>
         </div>
 
         <div className="absolute mt-32 xl:mt-0 xl:max-w-[80%] flex flex-col xl:flex-row justify-center gap-12 items-center">
@@ -177,7 +177,7 @@ export default function Home() {
       <section className="bg-primary flex justify-center py-40 px-6 xl:px-10">
         <div className="flex flex-col xl:flex-row xl:justify-center gap-10">
           <div className="gap-7 w-full xl:w-1/2 flex flex-col items-center xl:items-start max-w-screen-sm">
-            <h1 className="text-2xl text-white w-full">Voluntariado</h1>
+            <h1 className="text-white w-full" >Voluntariado</h1>
             <div className="text-white text-lg font-family-Lora text-justify">
               Você pode ser voluntário em um de nossos ministérios! Os
               ministérios servem para servir a Igreja, as redes, as células e ao
@@ -190,7 +190,7 @@ export default function Home() {
             </Button>
           </div>
           <div className="gap-7 w-full xl:w-1/2 flex flex-col max-w-screen-sm">
-            <h1 className="text-2xl text-white">Junte-se a uma célula</h1>
+            <h1 className="text-white">Junte-se a uma célula</h1>
             <div className="text-white text-lg font-family-Lora text-justify">
               Officia earum at quia recusandae. Tempora beatae est aliquam
               fugiat sed et. Exercitationem vitae molestiae officia eos aut id
@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </section>
       <section className="gap-10 py-40 px-6 w-full items-center md:px-24 lg:px-10 flex flex-col justify-center">
-        <h1 className="w-full text-2xl flex justify-center max-w-screen-xl">
+        <h1 className="w-full flex justify-center max-w-screen-xl">
           Próximos eventos
         </h1>
         <div className="w-full max-w-[67rem]">

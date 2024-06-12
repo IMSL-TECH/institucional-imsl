@@ -1,6 +1,7 @@
 import facebook from "../assets/icons/social/icon-facebook.svg";
 import instagram from "../assets/icons/social/icon-instagram.svg";
 import email from "../assets/icons/social/icon-email.svg";
+import youtube from "../assets/icons/social/icon-youtube.svg"
 
 import Link from "next/link";
 import Image from "next/image";
@@ -27,6 +28,7 @@ const social = [
     alt: "Ícone do email",
     href: "mailto:prakenia@gmail.com",
   },
+  {icon: youtube, name: "youtube", alt: "Ícone do youtube", href: "https://www.youtube.com/c/MonteSi%C3%A3oLinhares"}
 ];
 
 const styles = {
