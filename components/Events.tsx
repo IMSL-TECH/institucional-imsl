@@ -13,7 +13,7 @@ export default function Events({ title, children, href, info }: EventsType) {
       <h2>{title}</h2>
         
       </Link>
-      <div className="font-family-Lora text-base sm:text-xl">{children}</div>
+      <div className="font-family-Lora text-base sm:text-xl text-justify">{children}</div>
       <div>
         <div className="font-['Montserrat'] border-solid py-4 pl-10 border-y-[1px] border-gray-200 uppercase font-semibold text-[11px] tracking-[.15rem] sm:text-[0.6rem] relative">
           <Image
