@@ -2,7 +2,7 @@ import Button from "./Button";
 import MenuList from "./MenuList";
 import Image from "next/image";
 
-import logo from "../assets/icons/logoMS253x150-1.png";
+import logo from "../assets/icons/PNG BRANCA HORIZONTAL.png";
 import Social from "./Social";
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="flex flex-col items-center py-24 lg:px-10 px-8 bg-primary w-full">
         <div className="w-full max-w-[640px] xl:max-w-[70rem] flex flex-col xl:flex-row gap-8">
           <div className="w-full  xl:w-1/2 flex flex-col  items-center xl:items-start gap-5">
-            <Image src={logo} alt="Logo Monte Sião" width={130} />
+            <Image src={logo} alt="Logo Monte Sião" width={150} />
             <div className="text-white font-family-Lora opacity-75">
               Fundada em 2000 pelos pastores Fernando Pires e Leia Liberato,
               hoje é presidida e pastoreada pelo pastor Jucimar Ramos. A Monte
