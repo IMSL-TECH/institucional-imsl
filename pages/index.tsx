@@ -1,6 +1,5 @@
 import React, { useCallback } from "react";
 
-import Image from "next/image";
 import Menu from "@/components/Menu";
 import Button from "@/components/Button";
 import Events from "@/components/Events";
@@ -10,31 +9,29 @@ import SmoothScroll from "@/components/SmoothScroll";
 import type { EventsType } from "@/types";
 import { Inter } from "next/font/google";
 
-import banner from "../assets/banner/IMG_1416.jpg";
-
 const inter = Inter({ subsets: ["latin"] });
 
 const events = [
   {
-    title: "Confirenci das crianças de 2019",
+    title: "240 HORAS DE ORAÇÃO E ADORAÇÃO | AQUELES QUE ESPERAM",
     children:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum",
+      "Em sua 5ª edição, as 240 horas de oração e adoração é um evento focado em acessar o poder da unidade da igreja através de um ajuntamento santo por 10 dias ininterruptos. Na edição desse ano temos um novo tema, “AQUELES QUE ESPERAM”, onde trabalharemos o texto de Isaías 64:4 – “Desde os tempos antigos ninguém ouviu, nenhum ouvido percebeu, e olho nenhum viu outro Deus, além de ti, que trabalha para aqueles que nele esperam.”",
     href: "/",
     info: {
-      date: "Sabado 27 de novembro",
-      time: "8:00AM - 5:30PM",
-      address: "8317, Av. Prefeito Samuel Batista Cruz, 8259 - Três Barras,",
+      date: "09 a 19 de maio",
+      time: "18h",
+      address: "Av. Prefeito Samuel Batista Cruz, Três Barras, 3593, Linhares – ES.",
     },
   },
   {
-    title: "Confirencia das crianças de 2019",
+    title: "24 ANOS MONTE SIÃO LINHARES | ANO DO PROPÓSITO PERFEITO",
     children:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum",
+      "Neste ano nossa igreja completa 24 anos, entrando no ciclo do ano 25, o ANO DO PROPÓSITO PERFEITO! Estaremos reunidos para celebrarmos a Deus com alegria e gratidão por tudo que fez até aqui, entrando no novo ciclo com chave de ouro, na presença do único que é digno: Jesus! Venha participar conosco! “E sabemos que todas as coisas contribuem juntamente para o bem daqueles que amam a Deus, daqueles que são chamados segundo o seu propósito”. – Romanos 8:28",
     href: "/",
     info: {
-      date: "Sabado 27 de novembro",
-      time: "8:00AM - 5:30PM",
-      address: "8317, Av. Prefeito Samuel Batista Cruz, 8259 - Três Barras,",
+      date: "09 de junho",
+      time: "18h",
+      address: "Av. Prefeito Samuel Batista Cruz, Três Barras, 3593, Linhares – ES.",
     },
   },
 ];
@@ -113,12 +110,14 @@ export default function Home() {
       <Menu />
       <section className="h-screen relative flex justify-center items-center">
         <div className="w-full h-full relative">
-          <Image
-            src={banner}
-            alt="Logo Monte Sião"
-            className="bg-no-repeat bg-contain bg-center object-cover w-full h-full -z-10"
-          />
-          <div className="w-full h-full absolute bg-gradient-to-b from-[#162a65] to-[#247377] top-0 opacity-70"></div>
+          <div className="relative p-0 w-full h-full overflow-hidden">
+            <iframe
+              src="https://player.vimeo.com/video/957949303?background=1&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              allow="autoplay; fullscreen;"
+              title="MSL-VÍDEO-BG_1"
+            ></iframe>
+          </div>
+          <div className="w-full h-full absolute bg-gradient-to-b from-[#162a65] to-[#247377] top-0 opacity-30"></div>
         </div>
 
         <div className="absolute mt-32 xl:mt-0 xl:max-w-[80%] flex flex-col xl:flex-row justify-center gap-12 items-center">
@@ -172,12 +171,11 @@ export default function Home() {
           <div className="gap-7 w-full xl:w-1/2 flex flex-col max-w-screen-sm">
             <h1 className="text-white">Junte-se a uma célula</h1>
             <div className="text-white text-lg font-family-Lora text-justify">
-              Officia earum at quia recusandae. Tempora beatae est aliquam
-              fugiat sed et. Exercitationem vitae molestiae officia eos aut id
-              ad. Et exercitationem quae perspiciatis mollitia. Laborum quasi
-              inventore eaque quia non. Ipsa dignissimos ipsum nisi qui eos et
-              iste magnam. Aut dolorum mollitia illum. Iste iure similique nobis
-              fuga est amet.
+              As células são pensadas de forma estratégica para que você tenha
+              um ambiente seguro para aprender mais sobre Deus e criar conexões
+              saudáveis com os irmãos, especialmente se você é novo na fé e
+              precisa ser discipulado. Junte-se a uma de nossas células,
+              encontre a mais próxima de você!
             </div>
             <Button type={3} href="" width="mt-auto self-end w-full">
               Encontrar uma celula
@@ -186,14 +184,16 @@ export default function Home() {
         </div>
       </section>
       <section className="gap-10 py-40 px-6 w-full items-center md:px-24 lg:px-10 flex flex-col justify-center">
-        <h1 className="w-full flex justify-center max-w-screen-xl">
+        <h1 className="w-full text-center md:text-[30px] xl:text-[40px] max-w-screen-xl">
           Próximos eventos
         </h1>
         <div className="w-full max-w-[67rem] flex justify-center items-center flex-col gap-14">
           <div className="w-full grid grid-cols-1 xl:grid-cols-2 max-w-[640px] xl:max-w-none gap-10">
             {events.map(renderEvents)}
           </div>
-          <Button width="max-w-[640px] w-full" href="/events" type={2}>Ver mais</Button>
+          <Button width="max-w-[640px] w-full" href="/events" type={2}>
+            Ver mais
+          </Button>
         </div>
       </section>
       <Footer />
