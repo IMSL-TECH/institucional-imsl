@@ -183,7 +183,7 @@ export default function Home() {
               ad. Et exercitationem quae perspiciatis mollitia. Laborum quasi
               inventore eaque quia non. Ipsa dignissimos ipsum nisi qui eos et
               iste magnam. Aut dolorum mollitia illum. Iste iure similique nobis
-              fuga est amet.
+              fuga est amet
             </div>
             <Button type={3} href="" width="mt-auto self-end w-full">
               Encontrar uma celula
