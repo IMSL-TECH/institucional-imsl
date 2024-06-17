@@ -6,8 +6,12 @@ import Events from "@/components/Events";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 
+import Image from "next/image";
+
 import type { EventsType } from "@/types";
 import { Inter } from "next/font/google";
+
+import firstBanner from "@/assets/banner/firstBanner.png"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -108,8 +112,9 @@ export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col bg-white ${inter.className}`}>
       <Menu />
-      <section className="h-screen relative flex justify-center items-center">
+      <section className="h-screen relative flex bg-black justify-center items-center">
         <div className="w-full h-full relative">
+          <Image className="absolute bg-no-repeat bg-cover h-full w-full object-cover" src={firstBanner} alt="Primeira imagem do video banner"/>
           <div className="relative p-0 w-full h-full overflow-hidden">
             <iframe
               src="https://player.vimeo.com/video/957949303?background=1&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
