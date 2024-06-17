@@ -89,7 +89,7 @@ export default function Jose() {
   );
 
   return (
-    <main className={`flex min-h-screen flex-col ${inter.className}`}>
+    <main className={`flex min-h-screen flex-col items-center ${inter.className}`}>
       <Menu />
       <section className="h-[50vh] w-full flex justify-center items-center bg-black relative">
         <Image alt="Banner" src={banner} className="w-full h-full bg-no-repeat bg-contain bg-center object-cover"/>
@@ -97,7 +97,7 @@ export default function Jose() {
           Quem somos
         </p>
       </section>
-      <section className="w-full py-8 lg:py-20 px-8 sm:px-14 lg:px-20 sm:py-32 gap-14 flex flex-col items-center">
+      <section className="w-full max-w-7xl py-8 lg:py-20 px-8 sm:px-14 lg:px-20 sm:py-32 gap-14 flex flex-col items-center">
         <div className="font-family-Lora text-2xl sm:text-3xl w-full">
           Em tempos de grande confusão no mundo, não há nada mais importante
           para alguém que quer viver em serenidade do que saber quem é e o que
@@ -154,7 +154,7 @@ export default function Jose() {
           </div>
         </div>
       </section>
-      <section className="w-full p-6 md:p-10 px-8 sm:px-14 lg:px-20">
+      <section className="w-full p-6 md:p-10 px-8 sm:px-14 lg:px-20 max-w-7xl">
         <div className="flex flex-col border-l-4 border-[#184a4d] p-10">
           <div className="font-family-Lora text-2xl antialiased">
             “O Senhor criará sobre todo o Monte Sião e sobre aqueles que se
@@ -165,7 +165,7 @@ export default function Jose() {
           <div className="text-sm font-['Open_Sans']">Isaias 4:5-6.</div>
         </div>
       </section>
-      <section className="w-full p-6 md:p-10 px-8 sm:px-14 lg:px-20">
+      <section className="w-full p-6 md:p-10 px-8 sm:px-14 lg:px-20 max-w-7xl">
         <div className="mb-12">
           <h1 className="text-2xl w-full normal-case mb-10">
             Visão, Valores e missão
@@ -220,7 +220,7 @@ export default function Jose() {
           </div>
         </div>
       </section>
-      <section className="w-full p-6 md:p-10 px-8 sm:px-14 lg:px-20">
+      <section className="w-full p-6 md:p-10 px-8 sm:px-14 lg:px-20 max-w-7xl">
         <h1 className="text-2xl w-full normal-case mb-10">
           Tomando posse da terra
         </h1>
@@ -236,7 +236,7 @@ export default function Jose() {
           promessas.
         </div>
       </section>
-      <section className="w-full p-6 md:p-10 py-10 lg:py-20 px-8 sm:px-14 lg:px-20">
+      <section className="w-full p-6 md:p-10 py-10 lg:py-20 px-8 sm:px-14 lg:px-20 max-w-7xl">
         <h1 className="text-2xl w-full normal-case mb-10">Nossa liderança</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {userInfoList.map(renderUserList)}
