@@ -1,40 +1,9 @@
-import facebook from "../assets/icons/social/icon-facebook.svg";
-import instagram from "../assets/icons/social/icon-instagram.svg";
-import email from "../assets/icons/social/icon-email.svg";
-import youtube from "../assets/icons/social/icon-youtube.svg";
-
 import Link from "next/link";
 import Image from "next/image";
 
 import type { SocialType } from "@/types";
 import { useCallback } from "react";
-
-const social = [
-  {
-    icon: instagram,
-    name: "instagram",
-    alt: "Ícone do instagram",
-    href: "https://www.instagram.com/montesiaolinhares/",
-  },
-  {
-    icon: email,
-    name: "email",
-    alt: "Ícone do email",
-    href: "mailto:prakenia@gmail.com",
-  },
-  {
-    icon: youtube,
-    name: "youtube",
-    alt: "Ícone do youtube",
-    href: "https://www.youtube.com/c/MonteSi%C3%A3oLinhares",
-  },
-  {
-    icon: facebook,
-    name: "facebook",
-    alt: "Ícone do facebook",
-    href: "https://pt-br.facebook.com/montesiao.linhares/",
-  },
-];
+import { getContentSocialMedia } from "@/utils/getContent";
 
 const styles = {
   default: "border border-white",
@@ -66,6 +35,8 @@ export default function Social({
 }: {
   style?: "default" | "green";
 }) {
+  const social = getContentSocialMedia()
+
   const renderSocial = useCallback(
     ({ href, alt, icon, name }: SocialType, idx: number) => (
       <LinksSocial

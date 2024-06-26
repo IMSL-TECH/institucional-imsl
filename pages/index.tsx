@@ -11,71 +11,18 @@ import Image from "next/image";
 import type { EventsType } from "@/types";
 import { Inter } from "next/font/google";
 
-import firstBanner from "@/assets/banner/firstBanner.png"
+import firstBanner from "@/assets/banner/firstBanner.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const events = [
-  {
-    title: "240 HORAS DE ORAÇÃO E ADORAÇÃO | AQUELES QUE ESPERAM",
-    children:
-      "Em sua 5ª edição, as 240 horas de oração e adoração é um evento focado em acessar o poder da unidade da igreja através de um ajuntamento santo por 10 dias ininterruptos. Na edição desse ano temos um novo tema, “AQUELES QUE ESPERAM”, onde trabalharemos o texto de Isaías 64:4 – “Desde os tempos antigos ninguém ouviu, nenhum ouvido percebeu, e olho nenhum viu outro Deus, além de ti, que trabalha para aqueles que nele esperam.”",
-    href: "/",
-    info: {
-      date: "09 a 19 de maio",
-      time: "18h",
-      address: "Av. Prefeito Samuel Batista Cruz, Três Barras, 3593, Linhares – ES.",
-    },
-  },
-  {
-    title: "24 ANOS MONTE SIÃO LINHARES | ANO DO PROPÓSITO PERFEITO",
-    children:
-      "Neste ano nossa igreja completa 24 anos, entrando no ciclo do ano 25, o ANO DO PROPÓSITO PERFEITO! Estaremos reunidos para celebrarmos a Deus com alegria e gratidão por tudo que fez até aqui, entrando no novo ciclo com chave de ouro, na presença do único que é digno: Jesus! Venha participar conosco! “E sabemos que todas as coisas contribuem juntamente para o bem daqueles que amam a Deus, daqueles que são chamados segundo o seu propósito”. – Romanos 8:28",
-    href: "/",
-    info: {
-      date: "09 de junho",
-      time: "18h",
-      address: "Av. Prefeito Samuel Batista Cruz, Três Barras, 3593, Linhares – ES.",
-    },
-  },
-];
-
-const commonCults = [
-  {
-    title: "Culto principal",
-    date: "Domingo - 18h - 20:30h",
-    address:
-      "8317, Av. Prefeito Samuel Batista Cruz, 8259 - Três Barras, Linhares - ES",
-  },
-  {
-    title: "Horários de oração",
-    date: "Todos os dias - 6h | 18h",
-    address:
-      "8317, Av. Prefeito Samuel Batista Cruz, 8259 - Três Barras, Linhares - ES",
-  },
-  {
-    title: "Cura interior",
-    date: "Quarta-feira - 19:30h | Sábado - 14h",
-    address:
-      "8317, Av. Prefeito Samuel Batista Cruz, 8259 - Três Barras, Linhares - ES",
-  },
-];
+import { getContentHome } from "@/utils/getContent";
 
 type CommonCultsType = {
   title: string;
   date: string;
-  address: string;
-  length?: number;
-  idx?: number;
 };
 
-function CommonCults({
-  title,
-  date,
-  address,
-  length,
-  idx = 0,
-}: CommonCultsType) {
+function CommonCults({ title, date }: CommonCultsType) {
   return (
     <div className="w-full flex flex-col">
       <h2>{title}</h2>
@@ -94,30 +41,29 @@ export default function Home() {
     ),
     []
   );
-  const commonCultsLength = commonCults.length;
+
   const renderCommonCults = useCallback(
-    ({ title, date, address }: CommonCultsType, idx: number) => (
-      <CommonCults
-        title={title}
-        date={date}
-        address={address}
-        key={idx}
-        length={commonCultsLength}
-        idx={idx}
-      />
+    ({ title, date }: CommonCultsType, idx: number) => (
+      <CommonCults title={title} date={date} key={idx} />
     ),
     []
   );
+
+  const { videoBanner, title, welcomeEvents, events } = getContentHome();
 
   return (
     <main className={`flex min-h-screen flex-col bg-white ${inter.className}`}>
       <Menu />
       <section className="h-screen relative flex bg-black justify-center items-center">
         <div className="w-full h-full relative">
-          <Image className="absolute bg-no-repeat bg-cover h-full w-full object-cover" src={firstBanner} alt="Primeira imagem do video banner"/>
+          <Image
+            className="absolute bg-no-repeat bg-cover h-full w-full object-cover"
+            src={firstBanner}
+            alt="Primeira imagem do video banner"
+          />
           <div className="relative p-0 w-full h-full overflow-hidden">
             <iframe
-              src="https://player.vimeo.com/video/957949303?background=1&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              src={videoBanner}
               allow="autoplay; fullscreen;"
               title="MSL-VÍDEO-BG_1"
             ></iframe>
@@ -127,7 +73,7 @@ export default function Home() {
 
         <div className="absolute mt-32 xl:mt-0 xl:max-w-[80%] flex flex-col xl:flex-row justify-center gap-12 items-center">
           <h1 className="text-white w-52 text-center text-2xl sm:text-3xl md:text-4xl md:w-80 lg:w-64 lg:text-2xl xl:w-[36rem] xl:text-left xl:text-5xl">
-            CONHECENDO A DEUS E FAZENDO-O CONHECIDO
+            {title}
           </h1>
           <div className="flex flex-col px-10 md:px-0 justify-center items-center gap-2.5">
             <Button width="md:w-72 w-full" href="/events">
@@ -155,7 +101,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-full xl:max-w-[1330px] flex flex-col sm:flex-row items-center xl:items-start gap-5 max-w-screen-sm">
-          {commonCults.map(renderCommonCults)}
+          {welcomeEvents.map(renderCommonCults)}
         </div>
       </section>
       <section className="bg-primary flex justify-center py-40 px-6 xl:px-10">
