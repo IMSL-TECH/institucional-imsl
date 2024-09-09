@@ -28,7 +28,7 @@ export interface TitleDescriptionType {
 }
 
 export interface SocialType {
-  icon: any;
+  icon: StaticImageData;
   name: string;
   alt: string;
   href: string;
