@@ -15,17 +15,17 @@ const animated = {
 export default function SmoothScroll() {
   const [visible, setVisible] = useState("");
 
-  const handleClick = (event: any) => {
+  const defaultState = useDebounce(() => {
+    setVisible("");
+  }, 501);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
     const main = document.querySelector("html");
     main?.scrollIntoView({ behavior: "smooth" });
 
     setVisible(animated?.goTop);
-
-    const defaultState = useDebounce(() => {
-      setVisible("");
-    }, 501);
 
     defaultState();
   };
@@ -36,7 +36,7 @@ export default function SmoothScroll() {
       if (visible === animated.goTop) {
         return null;
       } else {
-        setVisible(screen > 250 ? animated?.active : "");
+        setVisible(screen > 250 ? animated.active : "");
       }
     };
 

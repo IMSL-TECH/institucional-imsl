@@ -3,7 +3,7 @@ import instagram from "../assets/icons/social/icon-instagram.svg";
 import email from "../assets/icons/social/icon-email.svg";
 import youtube from "../assets/icons/social/icon-youtube.svg";
 
-export default {
+const data = {
   home: {
     videoBanner:
       "https://player.vimeo.com/video/957949303?background=1&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
@@ -67,3 +67,5 @@ export default {
     },
   ],
 };
+
+export default data;

@@ -21,7 +21,7 @@ export default function Menu() {
   };
 
   const renderMenuHamburguer = useCallback(
-    (style: any, idx: number) => {
+    (style: string, idx: number) => {
       return (
         <li
           className={`${idx === 2 && !toggle ? "w-5" : "w-6"} h-0.5 ${
@@ -31,14 +31,14 @@ export default function Menu() {
         />
       );
     },
-    [toggle, linesMenuHamburguer]
+    [toggle]
   );
 
   return (
     <section className="flex w-full px-12 pt-10 z-10 absolute justify-between">
       <div>
         <Link href="/" className="">
-          <Image src={logo} alt="Logo Monte Sião" className="h-12 w-12" />
+          <Image src={logo} alt="Logo Monte Sião" width={48} height={48} />
         </Link>
       </div>
       <div className="hidden md:flex">

@@ -6,7 +6,7 @@ import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 
-import type { UserInfoType, TitleDescriptionType } from "@/types";
+import type { UserInfoType } from "@/types";
 
 import Jucimar from "@/assets/user/FOTO JUCIMAR RAMOS.jpg";
 import Berenice from "@/assets/user/62223956_1887020474731459_3011400726186833414_n.webp";

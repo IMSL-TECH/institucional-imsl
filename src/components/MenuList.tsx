@@ -58,7 +58,7 @@ export default function MenuList({
         onClick={onClick}
       />
     ),
-    [pathname, className, onClick]
+    [pathname, className, onClick, active]
   );
 
   return (
