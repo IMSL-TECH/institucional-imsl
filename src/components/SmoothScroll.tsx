@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useDebounce } from "@/utils/useDebounce";
 
 import Image from "next/image";
 
@@ -15,10 +14,6 @@ const animated = {
 export default function SmoothScroll() {
   const [visible, setVisible] = useState("");
 
-  const defaultState = useDebounce(() => {
-    setVisible("");
-  }, 501);
-
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
@@ -27,7 +22,7 @@ export default function SmoothScroll() {
 
     setVisible(animated?.goTop);
 
-    defaultState();
+    setVisible("");
   };
 
   useEffect(() => {
