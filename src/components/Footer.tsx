@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="flex flex-col gap-4 w-full xl:w-1/2">
               <h1 className="text-white mt-4 opacity-75">Localização</h1>
               <div className="text-white font-family-Lora opacity-75">
-                Igreja Monte Sião Linhares Avenida Prefeito Samuel Batista Cruz
+                Avenida Prefeito Samuel Batista Cruz, 8259
                 Três Barras, Linhares - ES
               </div>
               <Button
@@ -36,7 +36,7 @@ export default function Footer() {
                 type={3}
                 href="https://goo.gl/maps/v8Z37nrmEw78aCeh9"
               >
-                Mapa
+                Faça uma visita!
               </Button>
             </div>
             <div className="mt-4 xl:w-1/2 flex flex-col gap-5">
