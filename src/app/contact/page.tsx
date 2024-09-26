@@ -25,19 +25,11 @@ export default function Home() {
       </section>
       <section className="py-32 flex flex-col items-center px-8 sm:px-14 lg:px-20 w-full">
         <div className="flex flex-col w-full max-w-screen-sm xl:max-w-[67rem] gap-10">
-          <p className="font-family-Lora capital-first-letter text-lg text-justify">
-            Corrupti voluptas sed possimus odio cupiditate. Ut id nemo
-            doloremque iusto voluptates placeat esse ut. Voluptatem saepe aut
-            vel ut. Perferendis hic voluptates quibusdam animi quis est itaque.
-            Atque delectus praesentium voluptas voluptas. Odio voluptatem
-            facilis magni magnam quas aut quasi.
-          </p>
           <p className="font-family-Lora text-lg text-justify">
-            Nam est quae harum doloribus illum consequatur cupiditate quod rem.
-            Error qui culpa. Porro cupiditate veniam assumenda nostrum eius.
-            Tempore rerum eos. Est perferendis nesciunt corrupti quia sunt
-            reprehenderit id autem. Quis in voluptates perspiciatis. Voluptatem
-            saepe aut vel ut reprehenderit id perferendis
+          Estamos aqui para servir você! Se você deseja saber mais sobre a nossa igreja, tirar dúvidas, 
+          compartilhar um pedido de oração ou simplesmente conversar, não hesite em nos contatar. 
+          Acreditamos que cada pessoa é única e preciosa aos olhos de Deus, 
+          e queremos caminhar junto com você em sua jornada de fé.
           </p>
         </div>
 
@@ -49,7 +41,7 @@ export default function Home() {
                 Igreja Monte Sião Linhares
               </p>
               <p className="font-family-Lora text-base sm:text-lg">
-                Avenida Prefeito Samuel Batista Cruz
+                Avenida Prefeito Samuel Batista Cruz, 8259
               </p>
               <p className="font-family-Lora text-base sm:text-lg">
                 Três Barras, Linhares - ES
