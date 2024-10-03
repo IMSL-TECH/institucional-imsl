@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import background from "../assets/banner/mountain-background-web.png"
+import background from "@/assets/banner/mountain-background-web.png"
 import error404 from "@/assets/icons/404.svg"
 
 

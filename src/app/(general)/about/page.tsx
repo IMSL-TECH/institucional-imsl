@@ -1,18 +1,12 @@
-import { Inter } from "next/font/google";
 
 import Image from "next/image";
 import Link from "next/link";
-import Menu from "@/components/Menu";
-import Footer from "@/components/Footer";
-import SmoothScroll from "@/components/SmoothScroll";
 
 import type { UserInfoType } from "@/types";
 
 import Jucimar from "@/assets/user/FOTO JUCIMAR RAMOS.jpg";
 import Berenice from "@/assets/user/62223956_1887020474731459_3011400726186833414_n.webp";
 import banner from "@/assets/banner/home_cover_resized.jpg";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const userInfoList = [
   {
@@ -67,16 +61,14 @@ function UserInfo({ image, name, occupation, content, link }: UserInfoType) {
 export default function About() {
 
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center ${inter.className}`}
-    >
-      <Menu />
+   <>
+   
       <section className="h-[50vh] w-full flex justify-center items-center bg-black relative">
         <Image
           alt="Banner"
           src={banner}
           className="w-full h-full bg-no-repeat bg-contain bg-center object-cover"
-        />
+          />
         <p className="absolute bottom-16 whitespace-nowrap font-['Montserrat'] text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-6xl 2xl:text-8xl 2xl:bottom-28">
           Quem somos
         </p>
@@ -247,21 +239,18 @@ export default function About() {
                 idx: number
               ) => (
                 <UserInfo
-                  name={name}
-                  image={image}
-                  occupation={occupation}
-                  content={content}
-                  link={link}
-                  key={idx}
+                name={name}
+                image={image}
+                occupation={occupation}
+                content={content}
+                link={link}
+                key={idx}
                 />
               )
             )}
           </div>
         </section>
       </section>
-
-      <Footer />
-      <SmoothScroll />
-    </main>
+      </>
   );
 }

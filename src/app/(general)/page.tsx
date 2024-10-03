@@ -1,18 +1,14 @@
 import Image from "next/image";
-import Menu from "@/components/Menu";
 import Button from "@/components/Button";
 import Events from "@/components/Events";
-import Footer from "@/components/Footer";
-import SmoothScroll from "@/components/SmoothScroll";
+
 
 import { getContentHome } from "@/utils/getContent";
-import { Inter } from "next/font/google";
 
 import type { EventsType, CommonCultsType } from "@/types";
 
 import firstBanner from "@/assets/banner/firstBanner.png";
 
-const inter = Inter({ subsets: ["latin"] });
 
 function CommonCults({ title, date }: CommonCultsType) {
   return (
@@ -28,9 +24,8 @@ export default function Home() {
   const { videoBanner, title, welcomeEvents, events } = getContentHome();
 
   return (
-    <main className={`flex min-h-screen flex-col bg-white ${inter.className}`}>
-      <Menu />
-      <section className="h-screen relative flex bg-black justify-center items-center">
+    <>
+      <section className="h-screen w-full relative flex bg-black justify-center items-center">
         <div className="w-full h-full relative">
           <Image
             className="absolute bg-no-repeat bg-cover h-full w-full object-cover"
@@ -61,8 +56,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="py-32 px-6 lg:px-10 flex flex-col xl:justify-center items-center gap-16">
+      <section className="w-full py-32 px-6 lg:px-10 flex flex-col xl:justify-center items-center gap-16">
         <div className="w-full flex flex-col items-center gap-[55px] max-w-screen-sm xl:max-w-[1330px]">
           <h1 className="w-full text-center md:text-[30px] xl:text-[40px]">
             Bem-vindo à igreja Monte Sião
@@ -84,7 +78,7 @@ export default function Home() {
           )}
         </div>
       </section>
-      <section className="bg-primary flex justify-center py-40 px-6 xl:px-10">
+      <section className="bg-primary w-full flex justify-center py-40 px-6 xl:px-10">
         <div className="flex flex-col xl:flex-row xl:justify-center gap-10">
           <div className="gap-7 w-full xl:w-1/2 flex flex-col items-center xl:items-start max-w-screen-sm">
             <h1 className="text-white w-full">Voluntariado</h1>
@@ -133,8 +127,6 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <Footer />
-      <SmoothScroll />
-    </main>
+   </>
   );
 }
