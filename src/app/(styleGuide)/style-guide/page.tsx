@@ -1,11 +1,8 @@
 "use client"
-import { Metadata } from "next";
+// import { Metadata } from "next";
 
 import React, { useEffect, useState } from 'react';
-
-const cfg = {
-    scrollDuration: 800, // smoothscroll duration
-};
+import { Parallax, Background } from 'react-parallax';
 
 // export const metadata: Metadata = {
 //     title: "Style Guide",
@@ -22,6 +19,7 @@ import wheel_1000 from "@/assets/wheel-1000.jpg"
 export default function StyleGuide(){
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     // Smooth scroll
     const handleSmoothScroll = (e, targetId) => {
@@ -40,6 +38,22 @@ export default function StyleGuide(){
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+      // Back to top logic
+      useEffect(() => {
+        const pxShow = 500;
+        const handleScroll = () => {
+            if (window.scrollY >= pxShow) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
 
 
@@ -94,47 +108,53 @@ export default function StyleGuide(){
 
     {/* <!-- hero
     ================================================== --> */}
-    <section className="s-hero" data-parallax="scroll" data-image-src={heroBg.src} data-natural-width={3000} data-natural-height={2000} data-position-y="center">
 
-        <div className="hero-left-bar"></div>
+    <Parallax strength={600} >
+        <Background  className='bg-hero-paralax-image' >
+            <img src={heroBg.src} alt="Backgournd image home" />
+        </Background>
+        <section className="s-hero">
 
-        <div className="row hero-content">
+            <div className="hero-left-bar"></div>
 
-            <div className="column large-full hero-content__text">
-                <h1>
-                    We Exist To <br/>
-                    Honor God And <br/>
-                    Make Disciples
-                </h1>
+            <div className="row hero-content">
 
-                <div className="hero-content__buttons">
-                    <a href="events.html" className="btn btn--stroke">Upcoming Events</a>
-                    <a href="about.html" className="btn btn--stroke">About Us</a>
-                </div>
-            </div> {/* <!-- end hero-content__text --> */}
+                <div className="column large-full hero-content__text">
+                    <h1>
+                        We Exist To <br/>
+                        Honor God And <br/>
+                        Make Disciples
+                    </h1>
 
-        </div> {/* <!-- end hero-content --> */}
+                    <div className="hero-content__buttons">
+                        <a href="events.html" className="btn btn--stroke">Upcoming Events</a>
+                        <a href="about.html" className="btn btn--stroke">About Us</a>
+                    </div>
+                </div> {/* <!-- end hero-content__text --> */}
 
-        <ul className="hero-social">
-            <li className="hero-social__title">Follow Us</li>
-            <li>
-                <a href="#0" title="">Facebook</a>
-            </li>
-            <li>
-                <a href="#0" title="">YouTube</a>
-            </li>
-            <li>
-                <a href="#0" title="">Instagram</a>
-            </li>
-        </ul> {/* <!-- end hero-social --> */}
+            </div> {/* <!-- end hero-content --> */}
 
-        <div className="hero-scroll">
-            <a onClick={(e) => handleSmoothScroll(e, '#styles')} className="scroll-link smoothscroll">
-                Scroll For More
-            </a>
-        </div> {/* <!-- end hero-scroll --> */}
+            <ul className="hero-social">
+                <li className="hero-social__title">Follow Us</li>
+                <li>
+                    <a href="#0" title="">Facebook</a>
+                </li>
+                <li>
+                    <a href="#0" title="">YouTube</a>
+                </li>
+                <li>
+                    <a href="#0" title="">Instagram</a>
+                </li>
+            </ul> {/* <!-- end hero-social --> */}
 
-    </section> {/* <!-- end s-hero --> */}
+            <div className="hero-scroll">
+                <a onClick={(e) => handleSmoothScroll(e, '#styles')} className="scroll-link smoothscroll">
+                    Scroll For More
+                </a>
+            </div> {/* <!-- end hero-scroll --> */}
+
+        </section> {/* <!-- end s-hero --> */}  
+    </Parallax>
 
     {/* <!-- styles
     ================================================== --> */}
@@ -617,8 +637,8 @@ export default function StyleGuide(){
             </div>
         </div> {/* <!-- footer-bottom --> */}
 
-        <div className="ss-go-top">
-            <a className="smoothscroll" title="Back to Top" href="#top">
+        <div className={`ss-go-top ${isScrolled ? 'link-is-visible' : ''}`}>
+            <a className="smoothscroll" title="Back to Top" href="#top" onClick={(e) => handleSmoothScroll(e, '#top')}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
             </a>
         </div> {/* <!-- ss-go-top --> */}
