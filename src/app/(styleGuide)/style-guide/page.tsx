@@ -3,24 +3,14 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Style Guide",
     description:"Guia de Estilo"  };
-  
-import "@/assets/assets-style-guide/css/base.css"
-import "@/assets/assets-style-guide/css/main.css"
+
 import Image, { getImageProps } from "next/image";
 
-import logo from "@/assets/assets-style-guide/images/logo.svg"
-import simple_image from "@/assets/assets-style-guide/images/sample-image.jpg"
-
-// import "./modernizr.js"
-
-{/* <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest"> */}
-
-{/* <script src="js/modernizr.js"></script> */}
-
-
+import logo from  "@/assets/logo.svg"
+import simple_image from "@/assets/sample-image.jpg"
+import heroBg from "@/assets/hero-bg-3000.jpg"
+import wheel_500 from "@/assets/wheel-500.jpg"
+import wheel_1000 from "@/assets/wheel-1000.jpg"
 
 export default function StyleGuide(){
 
@@ -31,7 +21,7 @@ export default function StyleGuide(){
     width: 1440,
     height: 875,
     quality: 80,
-    src: '/../../assets/assets-style-guide/images/wheel-1000.jpg',
+    src: wheel_500.src,
   })
 
   const {
@@ -41,13 +31,13 @@ export default function StyleGuide(){
     width: 750,
     height: 1334,
     quality: 70,
-    src: '/../../assets/assets-style-guide/images/wheel-500.jpg',
+    src: wheel_1000.src,
   })
 
     return (
         <>
 
-<div id="top">
+    <div id="top">
 
     {/* <!-- header
     ================================================== --> */}
@@ -55,7 +45,7 @@ export default function StyleGuide(){
 
         <div className="header-logo">
             <a className="site-logo" href="index.html">
-                <Image height={30} width={30} src={logo} alt="Homepage"/>
+                <img src={logo.src} alt="Homepage"/>
             </a>
         </div>
 
@@ -72,10 +62,9 @@ export default function StyleGuide(){
 
     </header> {/* <!-- end s-header --> */}
 
-
     {/* <!-- hero
     ================================================== --> */}
-    <section className="s-hero" data-parallax="scroll" data-image-src="images/hero-bg-3000.jpg" data-natural-width={3000} data-natural-height={2000} data-position-y="center">
+    <section className="s-hero" data-parallax="scroll" data-image-src={heroBg.src} data-natural-width={3000} data-natural-height={2000} data-position-y="center">
 
         <div className="hero-left-bar"></div>
 
@@ -116,7 +105,6 @@ export default function StyleGuide(){
         </div> {/* <!-- end hero-scroll --> */}
 
     </section> {/* <!-- end s-hero --> */}
-
 
     {/* <!-- styles
     ================================================== --> */}
@@ -554,7 +542,7 @@ export default function StyleGuide(){
             <div className="column large-4 medium-5 tab-full">
                 <div className="footer-logo">
                     <a className="site-footer-logo" href="index.html">
-                        <img src="images/logo.svg" alt="Homepage"/>
+                        <img src={logo.src} alt="Homepage"/>
                     </a>
                 </div>  {/* <!-- footer-logo --> */}
                 <p>
@@ -606,13 +594,6 @@ export default function StyleGuide(){
         </div> {/* <!-- ss-go-top --> */}
 
     </footer> {/* <!-- end s-footer --> */}
-
-
-    {/* <!-- Java Script
-    ================================================== --> */}
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
 
 </div>
         </>
