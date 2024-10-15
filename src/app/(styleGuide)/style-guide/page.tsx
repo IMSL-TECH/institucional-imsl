@@ -21,6 +21,7 @@ import wheel_1000 from "@/assets/wheel-1000.jpg"
 
 export default function StyleGuide(){
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     // Smooth scroll
     const handleSmoothScroll = (e, targetId) => {
@@ -32,6 +33,12 @@ export default function StyleGuide(){
                 behavior: 'smooth',
             });
         }
+    };
+
+
+    // Mobile menu toggle
+    const handleMenuToggle = () => {
+        setIsMenuOpen(!isMenuOpen);
     };
 
 
@@ -72,7 +79,7 @@ export default function StyleGuide(){
             </a>
         </div>
 
-        <nav className="header-nav-wrap">
+        <nav style={{"display":`${isMenuOpen ? "block":"none"}`}} className={`header-nav-wrap`}>
             <ul className="header-nav">
                 <li><a href="index.html" title="Home">Home</a></li>
                 <li><a href="about.html" title="About">About</a></li>
@@ -81,7 +88,7 @@ export default function StyleGuide(){
             </ul>
         </nav>
 
-        <a className="header-menu-toggle" href="#0"><span>Menu</span></a>
+        <a className={`header-menu-toggle ${isMenuOpen ? 'is-clicked' : ''}`} onClick={handleMenuToggle} href="#0"><span>Menu</span></a>
 
     </header> {/* <!-- end s-header --> */}
 
