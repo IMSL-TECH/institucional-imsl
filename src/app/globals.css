@@ -49,29 +49,29 @@
   /* Collors
  * ------------------------------------- */
 
---black: #000000;
---off-black: #121212;
---white: #ffffff;
---off-white: #e7e7e7;
---primary-color:#3b0d11;
---highlight-color: #037c82;
+  --black: #000000;
+  --off-black: #121212;
+  --white: #ffffff;
+  --off-white: #e7e7e7;
+  --primary-color:#3b0d11;
+  --highlight-color: #037c82;
 
---green-dark: #113638;
---green-mid-dark: #1c5b5e;
---green-default: #247377;
---green-mid-light: #288085;
---green-light: #3bbdc4;
+  --green-dark: #113638;
+  --green-mid-dark: #1c5b5e;
+  --green-default: #247377;
+  --green-mid-light: #288085;
+  --green-light: #3bbdc4;
 
---blue-dark: #0d1736;
---blue-mid-dark: #102154;
---blue-default: #162a65;
---blue-mid-light: #2c5ca5;
---blue-light: #5798d1;
+  --blue-dark: #0d1736;
+  --blue-mid-dark: #102154;
+  --blue-default: #162a65;
+  --blue-mid-light: #2c5ca5;
+  --blue-light: #5798d1;
 
---white-default: #efefef;
+  --white-default: #efefef;
 
---bg-deaffult-gradient: rgb(36,115,119);
---gradient-deafult: linear-gradient(0deg, rgba(36,115,119,1) 0%, rgba(22,42,101,1) 100%);
+  --bg-deaffult-gradient: rgb(36,115,119);
+  --gradient-deafult: linear-gradient(0deg, rgba(36,115,119,1) 0%, rgba(22,42,101,1) 100%);
 
  }
   
@@ -3016,6 +3016,7 @@ input::-moz-focus-inner {
   color: var(--white);
   padding-left: 9rem;
   position: relative;
+  cursor: pointer;
 }
 
 .hero-scroll .scroll-link:hover,

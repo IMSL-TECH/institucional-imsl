@@ -1,8 +1,15 @@
+"use client"
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-    title: "Style Guide",
-    description:"Guia de Estilo"  };
+import React, { useEffect, useState } from 'react';
+
+const cfg = {
+    scrollDuration: 800, // smoothscroll duration
+};
+
+// export const metadata: Metadata = {
+//     title: "Style Guide",
+//     description:"Guia de Estilo"  };
 
 import Image, { getImageProps } from "next/image";
 
@@ -13,6 +20,22 @@ import wheel_500 from "@/assets/wheel-500.jpg"
 import wheel_1000 from "@/assets/wheel-1000.jpg"
 
 export default function StyleGuide(){
+
+
+    // Smooth scroll
+    const handleSmoothScroll = (e, targetId) => {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth',
+            });
+        }
+    };
+
+
+
 
     const common = { alt: 'Art Direction Example', sizes: '100vw' }
   
@@ -99,7 +122,7 @@ export default function StyleGuide(){
         </ul> {/* <!-- end hero-social --> */}
 
         <div className="hero-scroll">
-            <a href="#styles" className="scroll-link smoothscroll">
+            <a onClick={(e) => handleSmoothScroll(e, '#styles')} className="scroll-link smoothscroll">
                 Scroll For More
             </a>
         </div> {/* <!-- end hero-scroll --> */}
