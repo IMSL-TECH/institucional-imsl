@@ -19,9 +19,12 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@icons/*": ["./src/assets/icons/*"],
+      "@avatars/*": ["./src/assets/avatars/*"],
+      "@banner/*": ["./src/assets/banner/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","globals.css.d.ts"],
   "exclude": ["node_modules"]
 }
