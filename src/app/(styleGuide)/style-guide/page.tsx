@@ -10,7 +10,8 @@ import { Parallax, Background } from 'react-parallax';
 
 import Image, { getImageProps } from "next/image";
 
-import logo from  "@/assets/logo.svg"
+import icon_imsl from  "@/assets/icons/icon-imsl.png"
+import logo_imsl_horizontal from  "@/assets/icons/logo-imsl-horizontal.png"
 import simple_image from "@/assets/sample-image.jpg"
 import heroBg from "@/assets/hero-bg-3000.jpg"
 import wheel_500 from "@/assets/wheel-500.jpg"
@@ -89,7 +90,7 @@ export default function StyleGuide(){
 
         <div className="header-logo">
             <a className="site-logo" href="index.html">
-                <img src={logo.src} alt="Homepage"/>
+                <img src={icon_imsl.src} alt="Homepage"/>
             </a>
         </div>
 
@@ -592,7 +593,7 @@ export default function StyleGuide(){
             <div className="column large-4 medium-5 tab-full">
                 <div className="footer-logo">
                     <a className="site-footer-logo" href="index.html">
-                        <img src={logo.src} alt="Homepage"/>
+                        <img src={logo_imsl_horizontal.src} alt="Homepage"/>
                     </a>
                 </div>  {/* <!-- footer-logo --> */}
                 <p>

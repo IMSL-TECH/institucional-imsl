@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 import MenuList from "@/components/MenuList";
 import Social from "@/components/Social";
 
-import logo from "../assets/icons/PNG BRANCA HORIZONTAL.png";
+import logo from "../assets/icons/logo-imsl-horizontal.png";
 
 export default function Footer() {
   return (
