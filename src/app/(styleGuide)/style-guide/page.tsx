@@ -16,6 +16,7 @@ import simple_image from "@/assets/sample-image.jpg"
 import heroBg from "@/assets/hero-bg-3000.jpg"
 import wheel_500 from "@/assets/wheel-500.jpg"
 import wheel_1000 from "@/assets/wheel-1000.jpg"
+import PageContent from '@/components/pageContent';
 
 export default function StyleGuide(){
 
@@ -110,6 +111,7 @@ export default function StyleGuide(){
     {/* <!-- hero
     ================================================== --> */}
 
+
     <Parallax strength={600} >
         <Background  className='bg-hero-paralax-image' >
             <img src={heroBg.src} alt="Backgournd image home" />
@@ -159,7 +161,7 @@ export default function StyleGuide(){
 
     {/* <!-- styles
     ================================================== --> */}
-    <section id="styles" className="s-styles page-content">
+    <PageContent id="styles" className="s-styles page-content">
 
         <div className="row add-bottom">
 
@@ -544,7 +546,7 @@ export default function StyleGuide(){
         </div> {/* <!-- end row --> */}
 
 
-    </section> {/* <!-- end s-styles --> */}
+    </PageContent> {/* <!-- end s-styles --> */}
 
 
     {/* <!-- Social
