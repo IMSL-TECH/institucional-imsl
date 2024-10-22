@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MenuList from "@/components/MenuList";
 
-import logo from "../assets/icons/logoMSL.png";
+import logo from "../assets/icons/icon-imsl.png";
 
 const linesMenuHamburguer = [
   "transform rotate-45 translate-y-2 animate-spin-slow",
