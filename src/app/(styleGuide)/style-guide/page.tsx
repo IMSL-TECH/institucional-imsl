@@ -16,6 +16,7 @@ import SocialSection from '@/components/SocialSection';
 import Footer from '@/components/Footer';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import ParagraphImage from '@/components/ParagraphImage';
+import AlertBox from "@/components/AlertBox";
 
 export default function StyleGuide() {
 
@@ -382,25 +383,21 @@ export default function StyleGuide() {
 
                         <br />
 
-                        <div className="alert-box alert-box--error hideit">
-                            <p>Error Message. Your Message Goes Here.</p>
-                            <i className="fa fa-times alert-box__close" aria-hidden="true"></i>
-                        </div>{/* <!-- end error --> */}
+                       <AlertBox type="error">
+                        Message de error aqui
+                       </AlertBox>
 
-                        <div className="alert-box alert-box--success hideit">
-                            <p>Success Message. Your Message Goes Here.</p>
-                            <i className="fa fa-times alert-box__close" aria-hidden="true"></i>
-                        </div>{/* <!-- end success --> */}
+                       <AlertBox type="success">
+                        Message de error aqui
+                       </AlertBox>
 
-                        <div className="alert-box alert-box--info hideit">
-                            <p>Info Message. Your Message Goes Here.</p>
-                            <i className="fa fa-times alert-box__close" aria-hidden="true"></i>
-                        </div>{/* <!-- end info --> */}
+                       <AlertBox type="info">
+                        Message de error aqui
+                       </AlertBox>
 
-                        <div className="alert-box alert-box--notice hideit">
-                            <p>Notice Message. Your Message Goes Here.</p>
-                            <i className="fa fa-times alert-box__close" aria-hidden="true"></i>
-                        </div>{/* <!-- end notice --> */}
+                       <AlertBox type="notice">
+                        Message de error aqui
+                       </AlertBox>
 
                     </div>
 
