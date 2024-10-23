@@ -11,36 +11,18 @@ import React, { useEffect, useState } from 'react';
 import Image, { getImageProps } from "next/image";
 
 import simple_image from "@/assets/sample-image.jpg"
-import wheel_500 from "@/assets/wheel-500.jpg"
-import wheel_1000 from "@/assets/wheel-1000.jpg"
+
 
 import PageContent from '@/components/pageContent';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import SocialSection from '@/components/SocialSection';
 import Footer from '@/components/Footer';
+import ResponsiveImage from '@/components/ResponsiveImage';
 
 export default function StyleGuide() {
 
-    const common = { alt: 'Art Direction Example', sizes: '100vw' }
-
-    const { props: { srcSet: desktop } } = getImageProps({
-        ...common,
-        width: 1440,
-        height: 875,
-        quality: 80,
-        src: wheel_500.src,
-    })
-
-    const {
-        props: { srcSet: mobile, ...rest },
-    } = getImageProps({
-        ...common,
-        width: 750,
-        height: 1334,
-        quality: 70,
-        src: wheel_1000.src,
-    })
+    
 
     return (
         <div id="top">
@@ -304,11 +286,7 @@ export default function StyleGuide() {
 
                         <h3>Responsive Image</h3>
                         <p>
-                            <picture>
-                                <source media="(min-width: 1000px)" srcSet={desktop} />
-                                <source media="(min-width: 500px)" srcSet={mobile} />
-                                <img {...rest} style={{ width: '100%', height: 'auto' }} />
-                            </picture>
+                          <ResponsiveImage/>
                         </p>
 
                     </div>
