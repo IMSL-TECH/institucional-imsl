@@ -48,7 +48,7 @@ export default function StyleGuide() {
 
                         <h3>Paragraph and Image</h3>
 
-                            <ParagraphImage imgPos='left' imgSrc={simple_image.src} alt='image test'>
+                            <ParagraphImage right imgSrc={simple_image.src} alt='image test' className="h-text-justify">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.Cras id urna. Morbi
                                 tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis,
                                 purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna.
