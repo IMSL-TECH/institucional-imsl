@@ -5,7 +5,7 @@ import "../globals.css";
 
 import type { Metadata } from "next";
 import SmoothScroll from "@/components/SmoothScroll";
-import Footer from "@/components/Footer";
+import Footer from "@/components/base/Footer";
 import Menu from "@/components/Menu";
 
 const geistSans = localFont({
