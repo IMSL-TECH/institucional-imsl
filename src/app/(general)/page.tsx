@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "@/components/Button";
+import Button from "@/components/base/Button";
 import Events from "@/components/Events";
 
 
