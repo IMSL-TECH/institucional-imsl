@@ -23,7 +23,7 @@ export default function StyleGuide() {
     
 
     return (
-        <div id="top">
+        <>
             <Header />
             <Hero />
             <PageContent id="styles" className="s-styles">
@@ -407,6 +407,6 @@ export default function StyleGuide() {
             </PageContent> 
             <SocialSection/>
            <Footer/>
-        </div>
+        </>
     )
 }
