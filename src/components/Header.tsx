@@ -1,3 +1,4 @@
+"use client"
 import { ComponentPropsWithoutRef, useState } from "react";
 import icon_imsl from  "@/assets/icons/icon-imsl.png"
 

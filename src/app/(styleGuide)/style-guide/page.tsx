@@ -1,12 +1,11 @@
-"use client"
-// import { Metadata } from "next";
+import { Metadata } from "next";
 
 import React from 'react';
 
 
-// export const metadata: Metadata = {
-//     title: "Style Guide",
-//     description:"Guia de Estilo"  };
+export const metadata: Metadata = {
+    title: "Style Guide",
+    description:"Guia de Estilo"  };
 
 import simple_image from "@/assets/sample-image.jpg"
 
