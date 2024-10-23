@@ -1,17 +1,14 @@
 "use client"
 // import { Metadata } from "next";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 
 // export const metadata: Metadata = {
 //     title: "Style Guide",
 //     description:"Guia de Estilo"  };
 
-import Image, { getImageProps } from "next/image";
-
 import simple_image from "@/assets/sample-image.jpg"
-
 
 import PageContent from '@/components/pageContent';
 import Header from '@/components/Header';
@@ -19,6 +16,7 @@ import Hero from '@/components/Hero';
 import SocialSection from '@/components/SocialSection';
 import Footer from '@/components/Footer';
 import ResponsiveImage from '@/components/ResponsiveImage';
+import ParagraphImage from '@/components/ParagraphImage';
 
 export default function StyleGuide() {
 
@@ -51,12 +49,13 @@ export default function StyleGuide() {
 
                         <h3>Paragraph and Image</h3>
 
-                        <p><a href="#"><Image width="120" height="120" className="h-pull-left" alt="sample-image" src={simple_image} /></a>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.Cras id urna. Morbi
-                            tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis,
-                            purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna.
-                            Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id
-                            neque posuere nunc justo tempus leo. </p>
+                            <ParagraphImage imgPos='left' imgSrc={simple_image.src} alt='image test'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.Cras id urna. Morbi
+                                tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis,
+                                purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna.
+                                Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id
+                                neque posuere nunc justo tempus leo.
+                            </ParagraphImage>
 
                         <p>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna.
