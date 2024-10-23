@@ -10,17 +10,16 @@ import { Parallax, Background } from 'react-parallax';
 
 import Image, { getImageProps } from "next/image";
 
-import icon_imsl from  "@/assets/icons/icon-imsl.png"
 import logo_imsl_horizontal from  "@/assets/icons/logo-imsl-horizontal.png"
 import simple_image from "@/assets/sample-image.jpg"
 import heroBg from "@/assets/hero-bg-3000.jpg"
 import wheel_500 from "@/assets/wheel-500.jpg"
 import wheel_1000 from "@/assets/wheel-1000.jpg"
 import PageContent from '@/components/pageContent';
+import Header from '@/components/Header';
 
 export default function StyleGuide(){
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
     // Smooth scroll
@@ -35,11 +34,6 @@ export default function StyleGuide(){
         }
     };
 
-
-    // Mobile menu toggle
-    const handleMenuToggle = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
 
       // Back to top logic
       useEffect(() => {
@@ -87,30 +81,10 @@ export default function StyleGuide(){
 
     {/* <!-- header
     ================================================== --> */}
-    <header className="s-header">
-
-        <div className="header-logo">
-            <a className="site-logo" href="index.html">
-                <img src={icon_imsl.src} alt="Homepage"/>
-            </a>
-        </div>
-
-        <nav style={{"display":`${isMenuOpen ? "block":"none"}`}} className={`header-nav-wrap`}>
-            <ul className="header-nav">
-                <li><a href="index.html" title="Home">Home</a></li>
-                <li><a href="about.html" title="About">About</a></li>
-                <li><a href="events.html" title="Services">Events</a></li>
-                <li><a href="contact.html" title="Contact us">Contact</a></li>	
-            </ul>
-        </nav>
-
-        <a className={`header-menu-toggle ${isMenuOpen ? 'is-clicked' : ''}`} onClick={handleMenuToggle} href="#0"><span>Menu</span></a>
-
-    </header> {/* <!-- end s-header --> */}
+   <Header/>
 
     {/* <!-- hero
     ================================================== --> */}
-
 
     <Parallax strength={600} >
         <Background  className='bg-hero-paralax-image' >
