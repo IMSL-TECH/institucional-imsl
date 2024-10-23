@@ -95,7 +95,7 @@
 
  .bg-hero-paralax-image img{
   object-fit: cover;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: var(--blue-dark);
  }
