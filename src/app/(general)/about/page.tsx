@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import type { UserInfoType } from "@/types";
 
-import Jucimar from "@/assets/user/FOTO JUCIMAR RAMOS.jpg";
-import Berenice from "@/assets/user/62223956_1887020474731459_3011400726186833414_n.webp";
+import Jucimar from "@/assets/avatars/pr-jucimar.jpg";
+import Berenice from "@/assets/avatars/pra-berenice.webp";
 import banner from "@/assets/banner/home_cover_resized.jpg";
 
 const userInfoList = [

@@ -41,9 +41,12 @@ export default function Footer({}:Props){
                     </a>
                 </div>  {/* <!-- footer-logo --> */}
                 <p>
-                    Laborum ad explicabo. Molestiae voluptates est. Quisquam labore tenetur
-                    et assumenda voluptatibus a beatae. Rerum odio ducimus reprehenderit
-                    sit animi laborum nostrum dolorum animi voluptates est voluptatibus a beatae.
+                Fundada em 2000 pelos pastores Fernando Pires e Leia Liberato, 
+                hoje é presidida e pastoreada pelo pastor Jucimar Ramos. 
+                A Monte Sião é uma igreja terapêutica, que se importa em pregar 
+                a as verdades contidas na Palavra de Deus, seguindo-a fielmente 
+                e buscando praticar todos os seus princípios. Venha cultuar 
+                a Deus conosco!
                 </p>
             </div>
             <div className="column large-half tab-full">
@@ -51,29 +54,28 @@ export default function Footer({}:Props){
                     <div className="column large-7 medium-full">
                         <h4 className="h6">Our Location</h4>
                         <p>
-                            1600 Amphitheatre Parkway <br />
-                            Mountain View, California <br />
-                            94043 US
+                            Avenida Prefeito Samuel Batista Cruz, 8259 <br />
+                            Três Barras, Linhares/ES <br />
                         </p>
 
                         <p>
-                            <a href="https://goo.gl/maps/bc7C7eYtSmnNs6216" target="_blank" className="btn btn--footer">Get Direction</a>
+                            <a href="https://goo.gl/maps/v8Z37nrmEw78aCeh9" target="_blank" className="btn btn--footer">Venha Conhecer</a>
                         </p>
                     </div>
                     <div className="column large-5 medium-full">
-                        <h4 className="h6">Quick Links</h4>
+                        <h4 className="h6">Links Rápidos</h4>
                         <ul className="footer-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="volunteer.html">Volunteer</a></li>
-                            <li><a href="connect-group.html">Connect Groups</a></li>
-                            <li><a href="events.html">Upcoming Events</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">Sobre</a></li>
+                            <li><a href="/volunteering">Voluntariado</a></li>
+                            <li><a href="/cells">Células</a></li>
+                            <li><a href="/events">Programação</a></li>
+                            <li><a href="/contact">Contato</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div> {/* <!-- end footer-top --> */}
+        </div> 
 
         <div className="row footer-bottom">
             <div className="column ss-copyright">

@@ -187,6 +187,7 @@ export default function StyleGuide() {
 
                         <p>
                             <a className="btn btn--primary h-full-width" href="#0">Primary Button</a>
+                            <a className="btn btn--white h-full-width" href="#0">white Button</a>
                             <a className="btn h-full-width" href="#0">Default Button</a>
                             <a className="btn btn--stroke h-full-width" href="#0">Stroke Button</a>
                         </p>

@@ -19,17 +19,17 @@ export default function Header({className}:Props){
         <header className={`s-header ${className}`}>
 
             <div className="header-logo">
-                <a className="site-logo" href="index.html">
+                <a className="site-logo" href="/">
                     <img src={icon_imsl.src} alt="Homepage"/>
                 </a>
             </div>
 
             <nav style={{"display":`${isMenuOpen ? "block":"none"}`}} className={`header-nav-wrap`}>
                 <ul className="header-nav">
-                    <li><a href="index.html" title="Home">Home</a></li>
-                    <li><a href="about.html" title="About">About</a></li>
-                    <li><a href="events.html" title="Services">Events</a></li>
-                    <li><a href="contact.html" title="Contact us">Contact</a></li>	
+                    <li><a href="/" title="Home">Home</a></li>
+                    <li><a href="/about" title="Sobre">Sobre</a></li>
+                    <li><a href="/events" title="Eventos">Eventos</a></li>
+                    <li><a href="/contact" title="Entre em Contato">Contato</a></li>	
                 </ul>
             </nav>
 

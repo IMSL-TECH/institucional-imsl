@@ -76,6 +76,7 @@
 
   --black: #000000;
   --off-black: #121212;
+  --gray: #292929;
   --white: var(--white-default);
   --off-white: var(--off-white-default);
   --highlight-color: var(--green-mid-light);
@@ -1818,6 +1819,34 @@ input[type="button"].btn--primary:focus {
   border-color: var(--green-dark);
 }
 
+
+/* button white
+ * ------------------------------------------------- */
+ .btn.btn--white,
+ button.btn--white,
+ input[type="submit"].btn--white,
+ input[type="reset"].btn--white,
+ input[type="button"].btn--white {
+   background: var(--white-default);
+   border-color: var(--white-default);
+   color: var(--black);
+ }
+ 
+ .btn.btn--white:hover,
+ button.btn--white:hover,
+ input[type="submit"].btn--white:hover,
+ input[type="reset"].btn--white:hover,
+ input[type="button"].btn--white:hover,
+ .btn.btn--white:focus,
+ button.btn--white:focus,
+ input[type="submit"].btn--white:focus,
+ input[type="reset"].btn--white:focus,
+ input[type="button"].btn--white:focus {
+   background: var(--off-white);
+   border-color: var(--off-white);
+
+ }
+
 /* button modifiers
  * ------------------------------------------------- */
 .btn.h-full-width,
@@ -3320,17 +3349,17 @@ html.no-csstransitions .hero-content {
 .s-about {
   padding-top: 19.6rem;
   padding-bottom: 19.6rem;
-  background-color: var(--primary-color);
-  color: rgba(255, 255, 255, 0.8);
+  background-color: var(--white-default);
+  color: var(--black);
 }
 
 .s-about .subhead {
-  color: #fb8b23;
+  color: var(--black);
   margin-bottom: 4rem;
 }
 
 .s-about .lead {
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 4rem;
 }
 
@@ -3368,13 +3397,14 @@ html.no-csstransitions .hero-content {
   margin-top: 0;
   text-transform: uppercase;
   letter-spacing: .4rem;
-  color: var(--white);
+  color: var(--black);
 }
 
 .about-sched li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.47);
   padding-top: 3.2rem;
   padding-left: 0;
+  color: var(--gray);
 }
 
 /* ------------------------------------------------------------------- 
@@ -3430,12 +3460,16 @@ html.no-csstransitions .hero-content {
 .s-connect {
   padding-top: 16rem;
   padding-bottom: 0;
-  background-color: var(--white);
+  background-color: var(--green-default);
 }
 
 .connect-content {
   padding-bottom: 12rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+.connect-content .display-1 {
+  color: var(--white)
 }
 
 .connect-content .column {
@@ -3445,6 +3479,7 @@ html.no-csstransitions .hero-content {
   -webkit-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
+  color: var(--white)
 }
 
 .connect-content .column:first-child {

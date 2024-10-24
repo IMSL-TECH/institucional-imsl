@@ -17,35 +17,36 @@ export default function HeroContent({}:Props){
 
                 <div className="column large-full hero-content__text">
                     <h1>
-                        We Exist To <br/>
-                        Honor God And <br/>
-                        Make Disciples
+                        Conhecendo <br/>
+                        a Deus e fazendo-o <br/>
+                        conhecido
                     </h1>
 
                     <div className="hero-content__buttons">
-                        <a href="events.html" className="btn btn--stroke">Upcoming Events</a>
-                        <a href="about.html" className="btn btn--stroke">About Us</a>
+                        <a href="/events" className="btn btn--stroke">Próximos Eventos</a>
+                        <a href="/about" className="btn btn--stroke">Sobre nós</a>
                     </div>
                 </div> {/* <!-- end hero-content__text --> */}
 
             </div> {/* <!-- end hero-content --> */}
 
             <ul className="hero-social">
-                <li className="hero-social__title">Follow Us</li>
+                <li className="hero-social__title">Siga-nos</li>
                 <li>
-                    <a href="#0" title="">Facebook</a>
+                    <a href="https://www.instagram.com/montesiaolinhares/" title="">Instagram</a>
                 </li>
                 <li>
-                    <a href="#0" title="">YouTube</a>
+                    <a href="https://www.youtube.com/c/MonteSi%C3%A3oLinhares" title="">YouTube</a>
                 </li>
                 <li>
-                    <a href="#0" title="">Instagram</a>
+                    <a href="https://pt-br.facebook.com/montesiao.linhares/" title="">Facebook</a>
                 </li>
+               
             </ul> {/* <!-- end hero-social --> */}
 
             <div className="hero-scroll">
-                <a onClick={(e) => handleSmoothScroll(e, '#styles')} className="scroll-link smoothscroll">
-                    Scroll For More
+                <a onClick={(e) => handleSmoothScroll(e, '#about')} className="scroll-link smoothscroll">
+                    Ver mais...
                 </a>
             </div> {/* <!-- end hero-scroll --> */}
 

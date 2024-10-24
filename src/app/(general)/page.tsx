@@ -8,6 +8,8 @@ import { getContentHome } from "@/utils/getContent";
 import type { EventsType, CommonCultsType } from "@/types";
 
 import firstBanner from "@/assets/banner/firstBanner.png";
+import Hero from "@/components/Hero";
+import PageContent from "@/components/pageContent";
 
 
 function CommonCults({ title, date }: CommonCultsType) {
@@ -25,108 +27,135 @@ export default function Home() {
 
   return (
     <>
-      <section className="h-screen w-full relative flex bg-black justify-center items-center">
-        <div className="w-full h-full relative">
-          <Image
-            className="absolute bg-no-repeat bg-cover h-full w-full object-cover"
-            src={firstBanner}
-            alt="Primeira imagem do video banner"
-          />
-          <div className="relative p-0 w-full h-full overflow-hidden">
-            <iframe
-              src={videoBanner}
-              allow="autoplay; fullscreen;"
-              title="MSL-VÍDEO-BG_1"
-            ></iframe>
-          </div>
-          <div className="w-full h-full absolute bg-gradient-to-b from-[#162a65] to-[#247377] top-0 opacity-30"></div>
-        </div>
+      <Hero/>
 
-        <div className="absolute mt-32 xl:mt-0 xl:max-w-[80%] flex flex-col xl:flex-row justify-center gap-12 items-center">
-          <h1 className="text-white w-52 text-center text-2xl sm:text-3xl md:text-4xl md:w-80 lg:w-64 lg:text-2xl xl:w-[36rem] xl:text-left xl:text-5xl">
-            {title}
-          </h1>
-          <div className="flex flex-col px-10 md:px-0 justify-center items-center gap-2.5">
-            <Button width="md:w-72 w-full" href="/events">
-              Próximos eventos
-            </Button>
-            <Button width="md:w-72 w-full" href="/about">
-              Quem nós somos
-            </Button>
-          </div>
-        </div>
+      <section id="about" className="s-about">
+
+        <div className="row row-y-center about-content">
+
+            <div className="column large-half medium-full">
+                <h2 className="">Bem vindo a Monte Sião</h2>
+                <p className=""> 
+                Somos uma igreja acolhedora, onde todas as pessoas são bem vindas.
+                Cremos que Yahweh, o Deus de Abraão é soberano sobre todas as
+                coisas, e confiamos plenamente Nele. Amamos a cidade de Linhares,
+                onde fica nossa sede, e nosso coração arde por cumprir a missão que
+                Jesus confiou em nossas mãos, cuidando de pessoas, conhecendo a Deus
+                e fazendo-O conhecido!
+                </p>
+                <a href="/about" className="btn btn--primary h-full-width">Mais sobre nós</a>
+            </div>
+
+            <div className="column large-half medium-full">
+                <ul className="about-sched">
+                    <li>
+                        <h4>Culto Principal</h4>
+                        <p>
+                        Domingo - 18:00 <br/>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Oração</h4>
+                        <p>
+                        Todos os dias - 06:00 | 18:00  <br/>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Cura Interior</h4>
+                        <p>
+                        Quarta-Feira - 19:30 | Sábado - 14:00<br/>
+                        </p>
+                    </li>
+                </ul> 
+            </div>
+
+        </div> 
+
       </section>
-      <section className="w-full py-32 px-6 lg:px-10 flex flex-col xl:justify-center items-center gap-16">
-        <div className="w-full flex flex-col items-center gap-[55px] max-w-screen-sm xl:max-w-[1330px]">
-          <h1 className="w-full text-center md:text-[30px] xl:text-[40px]">
-            Bem-vindo à igreja Monte Sião
-          </h1>
-          <div className="w-full font-family-Lora text-[26px] sm:text-[28px] text-justify">
-            Somos uma igreja acolhedora, onde todas as pessoas são bem vindas.
-            Cremos que Yahweh, o Deus de Abraão é soberano sobre todas as
-            coisas, e confiamos plenamente Nele. Amamos a cidade de Linhares,
-            onde fica nossa sede, e nosso coração arde por cumprir a missão que
-            Jesus confiou em nossas mãos, cuidando de pessoas, conhecendo a Deus
-            e fazendo-O conhecido!
-          </div>
-        </div>
-        <div className="w-full h-full xl:max-w-[1330px] flex flex-col sm:flex-row items-center xl:items-start gap-5 max-w-screen-sm">
-          {welcomeEvents.map(
-            ({ title, date }: CommonCultsType, idx: number) => (
-              <CommonCults title={title} date={date} key={idx} />
-            )
-          )}
-        </div>
-      </section>
-      <section className="bg-primary w-full flex justify-center py-40 px-6 xl:px-10">
-        <div className="flex flex-col xl:flex-row xl:justify-center gap-10">
-          <div className="gap-7 w-full xl:w-1/2 flex flex-col items-center xl:items-start max-w-screen-sm">
-            <h1 className="text-white w-full">Voluntariado</h1>
-            <div className="text-white text-lg font-family-Lora text-justify">
-              Você pode ser voluntário em um de nossos ministérios! Os
+      <section className="s-connect">
+
+        <div className="row connect-content">
+            <div className="column large-half tab-full">
+                <h3 className="display-1">Voluntariado.</h3>
+                <p>
+                Você pode ser voluntário em um de nossos ministérios! Os
               ministérios servem para servir a Igreja, as redes, as células e ao
               mundo com suas ferramentas, buscando o aperfeiçoamento delas em
               todos os sentidos possíveis, para servir cada vez melhor ao corpo
               de Jesus.
+                </p>
+
+                <a href="/volunteering" className="btn btn--white h-full-width">Quero participar</a>
             </div>
-            <Button type={3} href="" width="mt-auto self-end w-full">
-              Quero participar
-            </Button>
-          </div>
-          <div className="gap-7 w-full xl:w-1/2 flex flex-col max-w-screen-sm">
-            <h1 className="text-white">Junte-se a uma célula</h1>
-            <div className="text-white text-lg font-family-Lora text-justify">
-              As células são pensadas de forma estratégica para que você tenha
+            <div className="column large-half tab-full">
+                <h3 className="display-1">Junte-se a uma célula.</h3>
+                <p>
+                As células são pensadas de forma estratégica para que você tenha
               um ambiente seguro para aprender mais sobre Deus e criar conexões
               saudáveis com os irmãos, especialmente se você é novo na fé e
               precisa ser discipulado. Junte-se a uma de nossas células,
               encontre a mais próxima de você!
+                </p>
+
+                <a href="/cells" className="btn btn--white h-full-width">Encontrar uma celula</a>
             </div>
-            <Button type={3} href="" width="mt-auto self-end w-full">
-              Encontrar uma celula
-            </Button>
-          </div>
         </div>
-      </section>
-      <section className="gap-10 py-40 px-6 w-full items-center md:px-24 lg:px-10 flex flex-col justify-center">
-        <h1 className="w-full text-center md:text-[30px] xl:text-[40px] max-w-screen-xl">
-          Próximos eventos
-        </h1>
-        <div className="w-full max-w-[67rem] flex justify-center items-center flex-col gap-14">
-          <div className="w-full grid grid-cols-1 xl:grid-cols-2 max-w-[640px] xl:max-w-none gap-10">
-            {events.map(
-              ({ title, href, children, info }: EventsType, idx: number) => (
-                <Events info={info} href={href} title={title} key={idx}>
-                  {children}
-                </Events>
-              )
-            )}
-          </div>
-          <Button width="max-w-[640px] w-full" href="/events" type={2}>
-            Ver mais
-          </Button>
+
+    </section>
+    <section className="s-events">
+
+        <div className="row events-header">
+            <div className="column">
+                <h2 className="display-1 ">Próximos Eventos</h2>
+            </div>
+        </div> 
+
+        <div className="row block-large-1-2 block-900-full events-list">
+
+            <div className="column events-list__item">
+                <h3 className="events-list__item-title">
+                    <a href="/events/240h-adoracao-2024" title="">240 HORAS DE ORAÇÃO E ADORAÇÃO</a>
+                </h3>
+                <p>
+                Em sua 5ª edição, as 240 horas de oração e adoração é um evento focado em acessar 
+                o poder da unidade da igreja através de um ajuntamento santo por 10 dias ininterruptos.
+                Na edição desse ano temos um novo tema, <strong>“AQUELES QUE ESPERAM”</strong>, onde trabalharemos o 
+                texto de Isaías 64:4 <em> – “Desde os tempos antigos ninguém ouviu, nenhum ouvido percebeu, 
+                e olho nenhum viu outro Deus, além de ti, que trabalha para aqueles que nele esperam.”</em>
+                </p>
+                <ul className="events-list__meta">
+                    <li className="events-list__meta-date">Saturday, September 28, 2019</li>
+                    <li className="events-list__meta-time">8:00AM - 5:30PM</li>
+                    <li className="events-list__meta-location">1600 Amphitheatre Parkway, Mt. View</li>
+                </ul>
+            </div>
+
+            <div className="column events-list__item">
+                <h3 className="events-list__item-title">
+                    <a href="/events/aniversario-monte-siao-24" title="">24 ANOS MONTE SIÃO LINHARES</a>
+                </h3>
+                <p>
+                Neste ano nossa igreja completa 24 anos, entrando no ciclo do ano 25, 
+                o ANO DO PROPÓSITO PERFEITO! Estaremos reunidos para celebrarmos a Deus com alegria e 
+                gratidão por tudo que fez até aqui, entrando no novo ciclo com chave de ouro, 
+                na presença do único que é digno: Jesus! Venha participar conosco! “E sabemos que 
+                todas as coisas contribuem juntamente para o bem daqueles que amam a Deus, daqueles 
+                que são chamados segundo o seu propósito”. – Romanos 8:28
+                </p>
+                <ul className="events-list__meta">
+                    <li className="events-list__meta-date">Saturday, July 27, 2019</li>
+                    <li className="events-list__meta-time">6:00PM - 8:30PM</li>
+                    <li className="events-list__meta-location">1600 Amphitheatre Parkway, Mt. View</li>
+                </ul>
+            </div> 
+
         </div>
-      </section>
+        <div className="row events-header">
+            <div className="column">
+                <a className="btn btn--primary ">Ver mais</a>
+            </div>
+        </div> 
+    </section>     
    </>
   );
 }
