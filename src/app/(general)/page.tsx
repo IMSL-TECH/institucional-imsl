@@ -1,29 +1,7 @@
-import Image from "next/image";
-import Button from "@/components/base/Button";
-import Events from "@/components/Events";
-
-
-import { getContentHome } from "@/utils/getContent";
-
-import type { EventsType, CommonCultsType } from "@/types";
-
-import firstBanner from "@/assets/banner/firstBanner.png";
 import Hero from "@/components/Hero";
-import PageContent from "@/components/pageContent";
 
-
-function CommonCults({ title, date }: CommonCultsType) {
-  return (
-    <div className="w-full flex flex-col">
-      <h2>{title}</h2>
-
-      <div className="font-family-Lora sm:text-base">{date}</div>
-    </div>
-  );
-}
 
 export default function Home() {
-  const { videoBanner, title, welcomeEvents, events } = getContentHome();
 
   return (
     <>
